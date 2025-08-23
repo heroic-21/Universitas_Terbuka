@@ -8,6 +8,8 @@ export default defineConfig({
             input: [
                 'resources/css/app.css',
                 'resources/js/app.js',
+                'resources/css/app-landing.scss',
+                'resources/js/app-landing.js'
             ],
             refresh: true,
         }),

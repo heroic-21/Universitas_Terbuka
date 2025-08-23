@@ -27,7 +27,7 @@
                                 @endif
                                     <div class="relative z-0 w-full group">
                                         <label class="font-medium text-sm text-slate-600 dark:text-slate-400">Kode Jurusan</label>
-                                        <input type="text" name="kode_jurusan[]" value="{{ old("kode_jurusan.$i") }}" placeholder="SI001"
+                                        <input type="text" name="kode_jurusan[]" value="{{ old(kode_jurusan.$i) }}" placeholder="SI001"
                                             class="form-input w-full rounded-md mt-1 border dark:border-slate-700 dark:text-slate-300 bg-transparent px-3 py-1 focus:outline-none focus:ring-0 {{ $errors->has("kode_jurusan.$i") ? 'border-red-500 is-invalid' : '' }}">
                                         @error("kode_jurusan.$i")
                                             <div class="invalid-feedback text-red-500 font-medium text-sm">
