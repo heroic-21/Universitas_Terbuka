@@ -88,7 +88,7 @@
 
   .country-select {
     .current {
-      i {
+      i { 
         @apply box-border h-[25px] w-[25px] rounded-[50%] border-[4px] border-[#585858];
       }
     }
@@ -99,7 +99,7 @@
   }
 
   .title {
-    @apply font-normal capitalize text-[#150E3D];
+    @apply font-bold capitalize text-[#150E3D];
     span {
       @apply font-bold text-[#150E3D];
     }
@@ -117,6 +117,10 @@
       img {
         @apply min-w-[100px] max-w-[15vw] animate-move;
       }
+    }
+
+    .highlight {
+      color: #fcec01;
     }
 
     .banner-13-thumb-sm {
@@ -675,10 +679,10 @@
     }
 
     .banner-14 {
-      @apply py-[200px];
+      @apply py-[80px];
 
       .banner-14-thumb img {
-        @apply max-w-[45vw];
+        @apply max-w-[47vw];
       }
     }
 

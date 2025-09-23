@@ -109,7 +109,7 @@
           @apply inline-block font-[500] capitalize leading-[80px];
 
           &.menu-item-has-children {
-            @apply relative z-0 pr-[14px];
+            @apply relative z-0 pr-[4px];
 
             &:before {
               @apply absolute right-[3px] top-1/2 z-[-1] h-[10px] w-[2px] translate-y-[-50%] transform bg-heading-color transition-all duration-[0.3s] ease-in content-[''];

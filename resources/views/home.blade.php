@@ -34,61 +34,7 @@
    <!-- search popup end-->
    <div class="body-overlay" id="body-overlay"></div>
    <!-- ==== topbar start ==== -->
-   <div class="topbar hidden custom-md:block">
-      <div class="container custom-container">
-         <div class="row align-items-center">
-            <div class="w-full custom-md:w-7/12">
-               <div class="topbar__list-wrapper">
-                  <ul class="topbar__list">
-                     <li class="!hidden custom-lg:!flex">Consult With It Advisor? <a href="index.html">Click Now</a>
-                     </li>
-                     <li><a href="mailto:support@example.com"><i class="fas fa-envelope"></i>support@example.com</a>
-                     </li>
-                     <li><a href="tel:2305-587-3407"><i class="fas fa-phone-alt"></i>+2(305)
-                           587-3407</a>
-                     </li>
-                  </ul>
-               </div>
-            </div>
-            <div class="w-full custom-md:w-5/12">
-               <div class="topbar__items justify-content-end">
-                  <div class="select-country">
-                     <select name="country" class="country-select select single-select">
-                        <option data-flag="fi-gb-eng">English</option>
-                        <option data-flag="fi-us">Spanish</option>
-                        <option data-flag="fi-cn">Chinese</option>
-                        <option data-flag="fi-it">Italian</option>
-                     </select>
-                  </div>
-                  <div class="select-currency">
-                     <select name="currency" class="currency-select select single-select">
-                        <option value="usd">USD</option>
-                        <option value="gbp">GBP</option>
-                        <option value="aud">AUD</option>
-                        <option value="euro">Euro</option>
-                     </select>
-                  </div>
-                  <div class="social">
-                     <a href="https://www.facebook.com/" target="_blank" aria-label="share us on facebook"
-                        title="facebook">
-                        <i class="fab fa-facebook-f"></i>
-                     </a>
-                     <a href="https://vimeo.com/" target="_blank" aria-label="share us on vimeo" title="vimeo">
-                        <i class="fab fa-vimeo-v"></i>
-                     </a>
-                     <a href="https://x.com/" target="_blank" aria-label="share us on twitter" title="twitter">
-                        <i class="fab fa-twitter"></i>
-                     </a>
-                     <a href="https://www.linkedin.com/" target="_blank" aria-label="share us on linkedin"
-                        title="linkedin">
-                        <i class="fab fa-linkedin-in"></i>
-                     </a>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </div>
-   </div>
+   
    <!-- ==== / topbar end ==== -->
    <!-- navbar start -->
    <nav class="navbar navbar-area navbar-area-2 navbar-expand-lg bg-white !mt-0">
@@ -111,7 +57,7 @@
          <div class="collapse navbar-collapse" id="itech_main_menu">
             <ul class="navbar-nav menu-open custom-md:!text-center custom-md:ps-[48px]">
                <li class="menu-item-has-children">
-                  <a href="index.html">Home</a>
+                  <a href="index.html">Beranda</a>
                   <ul class="sub-menu">
                      <li><a href="index.html">Software Agency</a></li>
                      <li><a href="index-2.html">SaaS App Landing</a></li>
@@ -130,7 +76,7 @@
                   </ul>
                </li>
                <li class="menu-item-has-children">
-                  <a href="index.html">Service</a>
+                  <a href="index.html">Akademik</a>
                   <ul class="sub-menu">
                      <li><a href="service.html">Service 01</a></li>
                      <li><a href="service-2.html">Service 02</a></li>
@@ -141,7 +87,7 @@
                   </ul>
                </li>
                <li class="menu-item-has-children">
-                  <a href="index.html">Pages</a>
+                  <a href="index.html">Pendaftaran</a>
                   <ul class="sub-menu">
                      <li><a href="about.html">About Us</a></li>
                      <li><a href="team.html">Team 01</a></li>
@@ -153,7 +99,7 @@
                   </ul>
                </li>
                <li class="menu-item-has-children mega-menu">
-                  <a href="index.html">Mega Menu</a>
+                  <a href="index.html">Layanan UT</a>
                   <div class="sub-menu">
                      <div class="row">
                         <div class="custom-md:w-1/4">
@@ -212,17 +158,26 @@
                      <li><a href="blog-details.html">Blog Details</a></li>
                   </ul>
                </li>
-               <li><a href="contact.html">Contact Us</a></li>
+               <li class="menu-item-has-children">
+                  <a href="index.html">Galeri</a>
+                  <ul class="sub-menu">
+                     <li><a href="blog.html">Blog 01</a></li>
+                     <li><a href="blog-2.html">Blog 02</a></li>
+                     <li><a href="blog-3.html">Blog 03</a></li>
+                     <li><a href="blog-4.html">Blog 04</a></li>
+                     <li><a href="blog-details.html">Blog Details</a></li>
+                  </ul>
+               </li>
             </ul>
          </div>
          <div class="nav-right-part nav-right-part-desktop custom-md:inline-flex items-center">
-            <a class="btn btn-border-base" href="about.html">Discover More <i class="fa fa-plus"></i></a>
+            <a class="btn btn-border-base" href="about.html">Login Admin</a>
             <a class="navbar-phone custom-lg:!inline-block !hidden" href="tel:123-456789">
                <span class="icon">
                   <img src="{{ asset('assets/landing/images/icon/1.png') }}" alt="img">
                </span>
-               <span>Need help?</span>
-               <h5>(808) 555-0111</h5>
+               <span>Contact Person (Yudi)</span>
+               <h5>0852-4622-0297</h5>
             </a>
          </div>
       </div>
@@ -235,21 +190,21 @@
             <div class="w-full custom-md:w-8/12 custom-lg:w-6/12">
                <div class="banner-inner">
                   <h6 class="subtitle" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
-                  Designing for the future
+                  Belajar di mana saja, kapan saja
                   </h6>
                   <h2 class="title" data-aos="fade-up" data-aos-duration="800" data-aos-delay="600">
-                  Scale your <span>business growth & revenue</span> to the <span>next level</span>
+                  SALUT UT <span class="highlight">Bagansiapiapi</span> Layanan Pendidikan Tinggi <span class="highlight">next level</span>
                   </h2>
                   <p class="content custom-lg:pe-[48px]" data-aos="fade-up" data-aos-duration="800" data-aos-delay="900">
-                  In today's competitive business, the demand for efficient and cost-effective IT solutions has never been more critical.
+                  Pendaftaran, pengambilan modul, konsultasi akademik & administrasi jadi lebih mudah, fleksibel, dan terpercaya.
                   </p>
                   <a class="btn btn-base" data-aos="fade-up" data-aos-duration="800" data-aos-delay="600" href="about.html">
-                  Get Started
+                  Daftar UT Bagansiapiapi
                   </a>
                   <div class="inline-block self-center" data-aos="fade-up" data-aos-duration="800" data-aos-delay="700">
                   <a class="video-play-btn-hover !static" href="https://www.youtube.com/embed/Wimkqo8gDZ0">
                      <img src="{{ asset('assets/landing/images/video.svg') }}" alt="img">
-                     <h6 class="inline-block">How We Work</h6>
+                     <h6 class="inline-block">Universitas Terbuka</h6>
                   </a>
                   </div>
                </div>
@@ -259,14 +214,14 @@
       <img class="animate-img-1 animate-topImageBounce" src="{{ asset('assets/landing/images/banner/2.png') }}" alt="img">
       <img class="animate-img-2 animate-leftImageBounce" src="{{ asset('assets/landing/images/banner/5.svg') }}" alt="img">
       <div class="banner-14-thumb">
-         <img src="{{ asset('assets/landing/images/home-14/banner/banner-thumb.png') }}" alt="Image">
+         <img src="{{ asset('assets/landing/images/MHSUT.png') }}" alt="Image">
       </div>
       <div class="banner-13-thumb-sm">
          <img src="{{ asset('assets/landing/images/home-14/banner/banner-shape.png') }}" alt="Image">
       </div>
-      <img src="{{ asset('assets/landing/images/home-14/banner/fig.png') }}" alt="Image" class="fig">
-      <img src="{{ asset('assets/landing/images/home-14/banner/sketch.png') }}" alt="Image" class="sketch">
-      <img src="{{ asset('assets/landing/images/home-14/banner/triangle.png') }}" alt="Image" class="triangle">
+      <img src="{{ asset('assets/landing/images/LogoUTHitam.png') }}" alt="Image" class="fig">
+      <img src="{{ asset('assets/landing/images/LOGOROHIL.png') }}" alt="Image" class="sketch">
+      <img src="{{ asset('assets/landing/images/LogoUT.png') }}" alt="Image" class="triangle">
    </div>
    <!-- banner end -->
    <!-- partner start -->
@@ -330,27 +285,25 @@
                   <img class="animate-img-3 animate-topImageBounce" src="{{ asset('assets/landing/images/banner/5.svg') }}" alt="img">
                   <img class="animate-img-3 ac-5 animate-topImageBounce" src="{{ asset('assets/landing/images/about/34.png') }}" alt="img">
                   <img class="animate-img-3 ac-6 animate-topImageBounce" src="{{ asset('assets/landing/images/about/35.png') }}" alt="img">
-                  <img class="main-img" src="{{ asset('assets/landing/images/about/about-14.png') }}" alt="img">
+                  <img class="main-img" src="{{ asset('assets/landing/images/MHSUT2.png') }}" alt="img">
                </div>
             </div>
             <div class="custom-md:w-1/2" data-aos="fade-right" data-aos-duration="800" data-aos-delay="300">
                <div class="section-title mt-[48px] mb-0 custom-md:mt-0">
-                  <h6 class="sub-title uppercase">Designing for the future</h6>
-                  <h2 class="title"><span>We Prominent Truly</span> trusted
-                     IT business <span>solutions</span>
+                  <h6 class="sub-title uppercase">Universitas Terbuka Bagansiapiapi</h6>
+                  <h2 class="title"><span>SEMUA BISA KULIAH DI KAMPUS NEGERI.</span> #Universitas Terbuka
                   </h2>
-                  <p class="content !mb-[24px] custom-lg:!mb-[48px]">Lorem Ipsum is simply dummy text of the printing
-                     and typesetting industry Loreaim Ipsum has been the industry's standard dummy</p>
+                  <p class="content !mb-[24px] custom-lg:!mb-[48px]">SALUT UT Bagansiapiapi hadir sebagai pusat layanan resmi Universitas Terbuka, memberikan kemudahan bagi mahasiswa untuk mendapatkan informasi, 
+                     layanan akademik, hingga pendampingan belajar tanpa harus jauh ke kota besar.</p>
                   <div class="row tr-g">
                      <div class="custom-sm:w-1/2 custom-md:w-full custom-2xl:w-6/12">
                         <div class="single-about-inner">
                            <div class="thumb mb-[16px]">
-                              <img src="{{ asset('assets/landing/images/icon/2.png') }}" alt="img">
+                              <img src="{{ asset('assets/landing/images/Akademik.png') }}" alt="img">
                            </div>
                            <div class="details">
-                              <h5 class="font-bold ">Our Ambition</h5>
-                              <p>Lorem is Ipsum is simply is de
-                                 is text Lorem
+                              <h5 class="font-bold ">Layanan Akademik</h5>
+                              <p>Konsultasi pendaftaran, administrasi kuliah, hingga bantuan akademik.
                               </p>
                            </div>
                         </div>
@@ -358,12 +311,11 @@
                      <div class="custom-sm:w-1/2 custom-md:w-full custom-2xl:w-6/12">
                         <div class="single-about-inner">
                            <div class="thumb mb-[16px]">
-                              <img src="{{ asset('assets/landing/images/icon/3.png') }}" alt="img">
+                              <img src="{{ asset('assets/landing/images/Belajar.png') }}" alt="img">
                            </div>
                            <div class="details font-bold">
-                              <h5>Our Purpose</h5>
-                              <p>Lorem is Ipsum is simply is de
-                                 is text Lorem
+                              <h5>Pendampingan Belajar</h5>
+                              <p>Tutorial, bimbingan, dan fasilitas belajar yang mendukung kesuksesan studi Anda.
                               </p>
                            </div>
                         </div>
@@ -371,15 +323,15 @@
                   </div>
                   <div class="about-area-on">
                      <div class="about-si">
-                        <p><i class="fas fa-check-circle"></i>No hidden fees.</p>
+                        <p><i class="fas fa-check-circle"></i>Fleksibel & Terjangkau.</p>
                      </div>
                      <div class="about-si">
-                        <p><i class="fas fa-check-circle"></i>100% security. Guaranteed.</p>
+                        <p><i class="fas fa-check-circle"></i>Kualitas Pendidikan Terjamin</p>
                      </div>
                   </div>
                   <div class="about-area-of">
                      <div class="area-left">
-                        <a class="btn btn-base mt-0" href="about.html" data-aos="fade-up" data-aos-duration="800" data-aos-delay="600" href="about.html">Get Started</a>
+                        <a class="btn btn-base mt-0" href="about.html" data-aos="fade-up" data-aos-duration="800" data-aos-delay="600" href="about.html">Daftar UT Sekarang</a>
                      </div>
                      <div class="area-right">
                         <div class="img-gp-wrap">
@@ -388,9 +340,9 @@
                               <img src="{{ asset('assets/landing/images/about/38.png') }}" alt="Image">
                               <img src="{{ asset('assets/landing/images/about/36.png') }}" alt="Image">
                            </div>
-                           <h5>2.3M+</h5>
+                           <h5>2.3K+ Pendaftar</h5>
                         </div>
-                        <p class="mb-0">5000+ Client reviews</p>
+                        <p class="mb-0">400+ Mahasiswa Aktif</p>
                      </div>
                   </div>
                </div>
@@ -404,25 +356,23 @@
       <img class="position-bottom-left animate-topImageBounce" src="{{ asset('assets/landing/images/icon/4.png') }}" alt="img">
       <div class="container">
          <div class="section-title text-center" data-aos="fade-up" data-aos-duration="800">
-            <h6 class="sub-title">Designing for the future</h6>
-            <h2 class="title"><span>Your Partner In Digital</span> Success</h2>
+            <h6 class="sub-title">Sentral Layanan Universitas Terbuka Bagansiapiapi</h6>
+            <h2 class="title">Daftar Fakultas UT Bagansiapiapi</h2>
          </div>
-         <div class="section-title text-center" data-aos="fade-up" data-aos-duration="800">
-  <h6 class="sub-title">Designing for the future</h6>
-  <h2 class="title"><span>Your Partner In Digital</span> Success</h2>
-</div>
+      <div class="section-title text-center" data-aos="fade-up" data-aos-duration="800">
+   </div>
 
 <div class="row">
-  <div class="custom-md:w-1/3 custom-sm:w-1/2">
+  <div class="custom-md:w-1/2 custom-sm:w-1/2">
     <div class="single-service-inner text-center" data-aos="fade-up" data-aos-duration="800">
       <div class="thumb">
-        <img src="{{ asset('assets/landing/images/service-icon/1.png') }}" alt="img">
+        <img src="{{ asset('assets/landing/images/FKIP.png') }}" alt="img">
       </div>
       <div class="details">
-        <h5><a href="service-details.html">Mobile App Development</a></h5>
-        <p>Lorem is Ipsum is simply is design iomyi is text Lorem Ipsum is simply is our busi Lorem is Ipsum is</p>
+        <h5><a href="service-details.html">Fakultas Keguruan dan Ilmu Pendidikan</a></h5>
+        <p>Sebuah fakultas di universitas yang berfokus pada pendidikan calon pendidik dan profesional di bidang pendidikan.</p>
         <a href="service-details.html">
-          Get Services
+          Lihat Informasi
           <svg xmlns="http://www.w3.org/2000/svg" width="34" height="20" viewBox="0 0 34 20" fill="none">
             <circle cx="24" cy="10" r="9.5" stroke="#BDC2C6" />
             <path d="M26.4333 10.5303C26.7262 10.2374 26.7262 9.76256 26.4333 9.46967L21.6603 4.6967C21.3674 4.40381 20.8925 4.40381 20.5996 4.6967C20.3068 4.98959 20.3068 5.46447 20.5996 5.75736L24.8423 10L20.5996 14.2426C20.3068 14.5355 20.3068 15.0104 20.5996 15.3033C20.8925 15.5962 21.3674 15.5962 21.6603 15.3033L26.4333 10.5303ZM0 10.75L25.903 10.75L25.903 9.25L0 9.25L0 10.75Z" fill="#246BFD" />
@@ -432,16 +382,16 @@
     </div>
   </div>
 
-  <div class="custom-md:w-1/3 custom-sm:w-1/2">
+  <div class="custom-md:w-1/2 custom-sm:w-1/2">
     <div class="single-service-inner text-center" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
       <div class="thumb">
-        <img src="{{ asset('assets/landing/images/service-icon/2.png') }}" alt="img">
+        <img src="{{ asset('assets/landing/images/FHSIP.png') }}" alt="img">
       </div>
       <div class="details">
-        <h5><a href="service-details.html">Content Marketing</a></h5>
-        <p>Lorem is Ipsum is simply is design iomyi is text Lorem Ipsum is simply is our busi Lorem is Ipsum is</p>
+        <h5><a href="service-details.html">Fakultas Hukum, Ilmu Sosial, dan Ilmu Politik</a></h5>
+        <p>Sebuah fakultas yang berfokus pada ilmu hukum, sosial, dan politik untuk mencetak lulusan yang kompeten dan berintegritas.</p>
         <a href="service-details.html">
-          Get Services
+          Lihat Informasi
           <svg xmlns="http://www.w3.org/2000/svg" width="34" height="20" viewBox="0 0 34 20" fill="none">
             <circle cx="24" cy="10" r="9.5" stroke="#BDC2C6" />
             <path d="M26.4333 10.5303C26.7262 10.2374 26.7262 9.76256 26.4333 9.46967L21.6603 4.6967C21.3674 4.40381 20.8925 4.40381 20.5996 4.6967C20.3068 4.98959 20.3068 5.46447 20.5996 5.75736L24.8423 10L20.5996 14.2426C20.3068 14.5355 20.3068 15.0104 20.5996 15.3033C20.8925 15.5962 21.3674 15.5962 21.6603 15.3033L26.4333 10.5303ZM0 10.75L25.903 10.75L25.903 9.25L0 9.25L0 10.75Z" fill="#246BFD" />
@@ -451,16 +401,35 @@
     </div>
   </div>
 
-  <div class="custom-md:w-1/3 custom-sm:w-1/2">
+  <div class="custom-md:w-1/2 custom-sm:w-1/2">
     <div class="single-service-inner text-center" data-aos="fade-up" data-aos-duration="800" data-aos-delay="600">
       <div class="thumb">
-        <img src="{{ asset('assets/landing/images/service-icon/3.png') }}" alt="img">
+        <img src="{{ asset('assets/landing/images/FEB.png') }}" alt="img">
       </div>
       <div class="details">
-        <h5><a href="service-details.html">E-commerce Solutions</a></h5>
-        <p>Lorem is Ipsum is simply is design iomyi is text Lorem Ipsum is simply is our busi Lorem is Ipsum is</p>
+        <h5><a href="service-details.html">Fakultas Ekonomi dan Bisnis</a></h5>
+        <p>Sebuah fakultas yang berfokus pada pengembangan ilmu ekonomi, manajemen, dan bisnis untuk mencetak lulusan yang profesional.</p>
         <a href="service-details.html">
-          Get Services
+          Lihat Informasi
+          <svg xmlns="http://www.w3.org/2000/svg" width="34" height="20" viewBox="0 0 34 20" fill="none">
+            <circle cx="24" cy="10" r="9.5" stroke="#BDC2C6" />
+            <path d="M26.4333 10.5303C26.7262 10.2374 26.7262 9.76256 26.4333 9.46967L21.6603 4.6967C21.3674 4.40381 20.8925 4.40381 20.5996 4.6967C20.3068 4.98959 20.3068 5.46447 20.5996 5.75736L24.8423 10L20.5996 14.2426C20.3068 14.5355 20.3068 15.0104 20.5996 15.3033C20.8925 15.5962 21.3674 15.5962 21.6603 15.3033L26.4333 10.5303ZM0 10.75L25.903 10.75L25.903 9.25L0 9.25L0 10.75Z" fill="#246BFD" />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="custom-md:w-1/2 custom-sm:w-1/2">
+    <div class="single-service-inner text-center" data-aos="fade-up" data-aos-duration="800" data-aos-delay="600">
+      <div class="thumb">
+        <img src="{{ asset('assets/landing/images/FST.png') }}" alt="img">
+      </div>
+      <div class="details">
+        <h5><a href="service-details.html">Fakultas Sains dan Teknologi</a></h5>
+        <p>Sebuah fakultas yang berfokus pada pengembangan ilmu sains dan teknologi untuk mencetak lulusan yang inovatif, dan berdaya guna.</p>
+        <a href="service-details.html">
+          Lihat Informasi
           <svg xmlns="http://www.w3.org/2000/svg" width="34" height="20" viewBox="0 0 34 20" fill="none">
             <circle cx="24" cy="10" r="9.5" stroke="#BDC2C6" />
             <path d="M26.4333 10.5303C26.7262 10.2374 26.7262 9.76256 26.4333 9.46967L21.6603 4.6967C21.3674 4.40381 20.8925 4.40381 20.5996 4.6967C20.3068 4.98959 20.3068 5.46447 20.5996 5.75736L24.8423 10L20.5996 14.2426C20.3068 14.5355 20.3068 15.0104 20.5996 15.3033C20.8925 15.5962 21.3674 15.5962 21.6603 15.3033L26.4333 10.5303ZM0 10.75L25.903 10.75L25.903 9.25L0 9.25L0 10.75Z" fill="#246BFD" />
