@@ -232,40 +232,41 @@
                <div class="partner__inner">
                   <div class="partner__slider owl-carousel">
                      <div class="partner__slider-single">
-                        <img src="{{ asset('assets/landing/images/home-14/partner/one.png') }}" alt="Image">
+                        <img src="{{ asset('assets/landing/images/LogoTUTWURI.png') }}" alt="Image">
                      </div>
                      <div class="partner__slider-single">
-                        <img src="{{ asset('assets/landing/images/home-14/partner/two.png') }}" alt="Image">
+                        <img src="{{ asset('assets/landing/images/LogoKM.png') }}" alt="Image">
                      </div>
                      <div class="partner__slider-single">
-                        <img src="{{ asset('assets/landing/images/home-14/partner/three.png') }}" alt="Image">
+                        <img src="{{ asset('assets/landing/images/LogoBANPT.png') }}" alt="Image">
                      </div>
                      <div class="partner__slider-single">
-                        <img src="{{ asset('assets/landing/images/home-14/partner/four.png') }}" alt="Image">
+                        <img src="{{ asset('assets/landing/images/LogoROHILMini.png') }}" alt="Image">
                      </div>
                      <div class="partner__slider-single">
-                        <img src="{{ asset('assets/landing/images/home-14/partner/five.png') }}" alt="Image">
+                        <img src="{{ asset('assets/landing/images/LogoUT1.png') }}" alt="Image">
                      </div>
                      <div class="partner__slider-single">
-                        <img src="{{ asset('assets/landing/images/home-14/partner/six.png') }}" alt="Image">
+                        <img src="{{ asset('assets/landing/images/LogoUT2.png') }}" alt="Image">
                      </div>
                      <div class="partner__slider-single">
-                        <img src="{{ asset('assets/landing/images/home-14/partner/one.png') }}" alt="Image">
+                        <img src="{{ asset('assets/landing/images/LogoTUTWURI.png') }}" alt="Image">
                      </div>
                      <div class="partner__slider-single">
-                        <img src="{{ asset('assets/landing/images/home-14/partner/two.png') }}" alt="Image">
+                        <img src="{{ asset('assets/landing/images/LogoKM.png') }}" alt="Image">
                      </div>
                      <div class="partner__slider-single">
-                        <img src="{{ asset('assets/landing/images/home-14/partner/three.png') }}" alt="Image">
+                        <img src="{{ asset('assets/landing/images/LogoBANPT.png') }}" alt="Image">
                      </div>
                      <div class="partner__slider-single">
-                        <img src="{{ asset('assets/landing/images/home-14/partner/four.png') }}" alt="Image">
+                        <img src="{{ asset('assets/landing/images/LogoROHILMini.png') }}" alt="Image">
                      </div>
                      <div class="partner__slider-single">
-                        <img src="{{ asset('assets/landing/images/home-14/partner/five.png') }}" alt="Image">
+                        <img src="{{ asset('assets/landing/images/LogoUT1.png') }}" alt="Image">
                      </div>
                      <div class="partner__slider-single">
-                        <img src="{{ asset('assets/landing/images/home-14/partner/six.png') }}" alt="Image">
+                        <img src="{{ asset('assets/landing/images/LogoUT2.png') }}" alt="Image">
+                     </div>
                      </div>
                   </div>
                </div>
@@ -369,7 +370,7 @@
         <img src="{{ asset('assets/landing/images/FKIP.png') }}" alt="img">
       </div>
       <div class="details">
-        <h5><a href="service-details.html">Fakultas Keguruan dan Ilmu Pendidikan</a></h5>
+        <h5><a href="service-details.html">Fakultas Keguruan dan Ilmu Pendidikan - 12 Program Studi</a></h5>
         <p>Sebuah fakultas di universitas yang berfokus pada pendidikan calon pendidik dan profesional di bidang pendidikan.</p>
         <a href="service-details.html">
           Lihat Informasi
@@ -388,7 +389,7 @@
         <img src="{{ asset('assets/landing/images/FHSIP.png') }}" alt="img">
       </div>
       <div class="details">
-        <h5><a href="service-details.html">Fakultas Hukum, Ilmu Sosial, dan Ilmu Politik</a></h5>
+        <h5><a href="service-details.html">Fakultas Hukum, Ilmu Sosial, dan Politik - 10 Program Studi</a></h5>
         <p>Sebuah fakultas yang berfokus pada ilmu hukum, sosial, dan politik untuk mencetak lulusan yang kompeten dan berintegritas.</p>
         <a href="service-details.html">
           Lihat Informasi
@@ -407,7 +408,7 @@
         <img src="{{ asset('assets/landing/images/FEB.png') }}" alt="img">
       </div>
       <div class="details">
-        <h5><a href="service-details.html">Fakultas Ekonomi dan Bisnis</a></h5>
+        <h5><a href="service-details.html">Fakultas Ekonomi dan Bisnis - 6 Program Studi</a></h5>
         <p>Sebuah fakultas yang berfokus pada pengembangan ilmu ekonomi, manajemen, dan bisnis untuk mencetak lulusan yang profesional.</p>
         <a href="service-details.html">
           Lihat Informasi
@@ -426,7 +427,7 @@
         <img src="{{ asset('assets/landing/images/FST.png') }}" alt="img">
       </div>
       <div class="details">
-        <h5><a href="service-details.html">Fakultas Sains dan Teknologi</a></h5>
+        <h5><a href="service-details.html">Fakultas Sains dan Teknologi - 8 Program Studi</a></h5>
         <p>Sebuah fakultas yang berfokus pada pengembangan ilmu sains dan teknologi untuk mencetak lulusan yang inovatif, dan berdaya guna.</p>
         <a href="service-details.html">
           Lihat Informasi
@@ -442,57 +443,232 @@
       </div>
    </div>
    <!-- service area end -->
+<!-- pricing-area start -->
+   <div class="pricing-area pd-top-100 pd-bottom-90">
+      <div class="container">
+         <div class="row justify-content-center">
+            <div class="w-full custom-lg:w-5/12">
+               <div class="section-title text-center wow animate__animated animate__fadeInUp" data-wow-duration="0.8s">
+                  <h6 class="sub-title">Sentral Layanan Universitas Terbuka Bagansiapiapi</h6>
+                  <h2 class="title capitalize"><span>Daftar Program Studi</span> UT Bagansiapiapi
+                  </h2>
+               </div>
+            </div>
+         </div>
+         <div class="row">
+            <div class="custom-md:w-1/2 custom-sm:w-1/2">
+               <div class="single-pricing-inner style-3 pa-o wow animate__animated animate__fadeInUp" data-wow-duration="0.8s">
+                  <h2 class="mb-[16px]">Fakultas Keguruan dan Ilmu Pendidikan <sub>/FKIP</sub></h2>
+                  <h5>12 Program Studi</h5>
+                  <ul>
+                     <li><i class="fa fa-check"></i>Pendidikan Bahasa dan Sastra Indonesia (S1)</li>
+                     <li><i class="fa fa-check"></i>Pendidikan Bahasa Inggris (S1)</li>
+                     <li><i class="fa fa-check"></i>Pendidikan Biologi (S1)</li>
+                     <li><i class="fa fa-check"></i>Pendidikan Fisika (S1)</li>
+                     <li><i class="fa fa-check"></i>Pendidikan Kimia (S1)</li>
+                     <li><i class="fa fa-check"></i>Pendidikan Matematika (S1)</li>
+                     <li><i class="fa fa-check"></i>Pendidikan Ekonomi (S1)</li>
+                     <li><i class="fa fa-check"></i>Pendidikan Pancasila & Kewarganegaraan (S1)</li>
+                     <li><i class="fa fa-check"></i>Teknologi Pendidikan (S1)</li>
+                     <li><i class="fa fa-check"></i>Pendidikan Guru Sekolah Dasar (S1)</li>
+                     <li><i class="fa fa-check"></i>Pendidikan Guru Pendidikan Anak Usia Dini (S1)</li>
+                     <li><i class="fa fa-check"></i>Pendidikan Agama Islam (S1)</li>
+                  </ul>
+               </div>
+            </div>
+            <div class="custom-md:w-1/2 custom-sm:w-1/2">
+               <div class="single-pricing-inner style-3 price-active pa-t wow animate__animated animate__fadeInUp"
+                  data-wow-duration="0.8s" data-wow-delay="0.3s">
+                  <h2 class="mb-[16px]">Fakultas Hukum, Ilmu Sosial, dan Politik<sub>/FHSIP</sub></h2>
+                  <h5>10 Program Studi</h5>
+                  <ul>
+                     <li><i class="fa fa-check"></i>Ilmu Administrasi Publik (S1)</li>
+                     <li><i class="fa fa-check"></i>Ilmu Administrasi Bisnis (S1)</li>
+                     <li><i class="fa fa-check"></i>Ilmu Pemerintahan (S1)</li>
+                     <li><i class="fa fa-check"></i>Ilmu Komunikasi (S1)</li>
+                     <li><i class="fa fa-check"></i>Sosiologi (S1)</li>
+                     <li><i class="fa fa-check"></i>Sastra Inggris Minat Penerjemahan (S1)</li>
+                     <li><i class="fa fa-check"></i>Ilmu Perpustakaan (S1)</li>
+                     <li><i class="fa fa-check"></i>Ilmu Hukum (S1)</li>
+                     <li><i class="fa fa-check"></i>Kearsipan (D4)</li>
+                     <li><i class="fa fa-check"></i>Perpajakan (D3 & S1)</li>
+                  </ul>
+               </div>
+            </div>
+            <div class="custom-md:w-1/2 custom-sm:w-1/2">
+               <div class="single-pricing-inner style-3 pa-h wow animate__animated animate__fadeInUp" data-wow-duration="0.8s"
+                  data-wow-delay="0.6s">
+                  <h2 class="mb-[16px]">Fakultas Ekonomi dan Bisnis<sub>/FEB</sub></h2>
+                  <h5>6 Program Studi</h5>
+                  <ul>
+                     <li><i class="fa fa-check"></i>Akuntansi Keuangan Publik (S1)</li>
+                     <li><i class="fa fa-check"></i>Ekonomi Syariah (S1)</li>
+                     <li><i class="fa fa-check"></i>Manajemen (S1)</li>
+                     <li><i class="fa fa-check"></i>Akuntansi (S1)</li>
+                     <li><i class="fa fa-check"></i>Ekonomi Pembangunan (S1)</li>
+                     <li><i class="fa fa-check"></i>Pariwisata (S1)</li>
+                  </ul>
+               </div>
+            </div>
+            <div class="custom-md:w-1/2 custom-sm:w-1/2">
+               <div class="single-pricing-inner style-3 price-active pa-t wow animate__animated animate__fadeInUp"
+                  data-wow-duration="0.8s" data-wow-delay="0.3s">
+                  <h2 class="mb-[16px]">Fakultas Sains dan Teknologi<sub>/FST</sub></h2>
+                  <h5>8 Program Studi</h5>
+                  <ul>
+                     <li><i class="fa fa-check"></i>Sistem Informasi (S1)</li>
+                     <li><i class="fa fa-check"></i>Statistik (S1)</li>
+                     <li><i class="fa fa-check"></i>Matematika (S1)</li>
+                     <li><i class="fa fa-check"></i>Biologi (S1)</li>
+                     <li><i class="fa fa-check"></i>Teknologi Pangan (S1)</li>
+                     <li><i class="fa fa-check"></i>Agribisnis (S1)</li>
+                     <li><i class="fa fa-check"></i>Perencanaan Wilayah & Kota/PWKL (S1)</li>
+                     <li><i class="fa fa-check"></i>Sains Data (S1)</li>
+                  </ul>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <!-- pricing-area start -->
+   <!-- counter area start -->
+   <div class="counter-area bg-relative bg-cover bg-center pd-top-110 pd-bottom-100">
+      <div class="container pd-bottom-20">
+         <div class="row">
+            <div class="custom-sm:w-1/2 custom-md:w-1/4  wow animate__animated animate__fadeInUp" data-wow-duration="0.8s">
+               <div class="single-counter-inner">
+                  <div class="thumb">
+                     <img src="{{ asset('assets/landing/images/LogoFAKULTAS.png') }}" alt="img">
+                  </div>
+                  <h2 class="text-white mt-[24px] mb-[8px]"><span class="counter">4</span></h2>
+                  <p class="text-white">Fakultas Tersedia</p>
+               </div>
+            </div>
+            <div class="custom-sm:w-1/2 custom-md:w-1/4  wow animate__animated animate__fadeInUp" data-wow-duration="0.8s"
+               data-wow-delay="0.3s">
+               <div class="single-counter-inner">
+                  <div class="thumb">
+                     <img src="{{ asset('assets/landing/images/LogoPRODI.png') }}" alt="img">
+                  </div>
+                  <h2 class="text-white mt-[24px] mb-[8px]"><span class="counter">38</span></h2>
+                  <p class="text-white">Program Studi Tersedia</p>
+               </div>
+            </div>
+            <div class="custom-sm:w-1/2 custom-md:w-1/4  wow animate__animated animate__fadeInUp" data-wow-duration="0.8s"
+               data-wow-delay="0.6s">
+               <div class="single-counter-inner">
+                  <div class="thumb">
+                     <img src="{{ asset('assets/landing/images/LogoMHS.png') }}" alt="img">
+                  </div>
+                  <h2 class="text-white mt-[24px] mb-[8px]"><span class="counter">2.4</span>k+</h2>
+                  <p class="text-white">Mahasiswa Aktif</p>
+               </div>
+            </div>
+            <div class="custom-sm:w-1/2 custom-md:w-1/4  wow animate__animated animate__fadeInUp" data-wow-duration="0.8s"
+               data-wow-delay="0.9s">
+               <div class="single-counter-inner">
+                  <div class="thumb">
+                     <img src="{{ asset('assets/landing/images/LogoPENDAFTAR.png') }}" alt="img">
+                  </div>
+                  <h2 class="text-white mt-[24px] mb-[8px]"><span class="counter">5</span>k+</h2>
+                  <p class="text-white">Pendaftar UT</p>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <!-- counter area end -->
    <!-- faq area start -->
    <div class="faq-area faq-area-margin-top bg-cover bg-center pd-top-90 pd-bottom-110 bi-9">
       <div class="container">
          <div class="row pd-top-120">
             <div class="custom-lg:w-6/12 custom-md:w-1/2 custom-sm:w-8/12 order-lg-last hidden custom-md:block">
                <div class="about-thumb-inner custom-md:pt-[16px] animate__animated" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
-                     <img class="main-img" src="{{ asset('assets/landing/images/faq/one.png') }}" alt="img">
-                     <img class="an-img animate-topImageBounce" src="{{ asset('assets/landing/images/faq/two.png') }}" alt="img">
-                     <img class="an-img-two animate-topImageBounce" src="{{ asset('assets/landing/images/faq/three.png') }}" alt="img">
+                     <img class="main-img pt-[10rem]" src="{{ asset('assets/landing/images/MHS3.png') }}" alt="img">
+                     <img class="an-img animate-topImageBounce" src="{{ asset('assets/landing/images/Elemen1.png') }}" alt="img">
+                     <img class="an-img-two animate-topImageBounce" src="{{ asset('assets/landing/images/Elemen2.png') }}" alt="img">
                </div>
             </div>
             <div class="custom-lg:w-6/12 custom-md:w-1/2 animate__animated" data-aos="fade-up" data-aos-duration="800">
                <div class="section-title !mb-0">
-                     <h6 class="sub-title">Designing for the future</h6>
-                     <h2 class="title"><span>We are Experts</span> Security <span>& Data</span> Management </h2>
-                     <p class="content">In today's competitive business, the demand for efficient solutions has never been more critical.</p>
+                     <h6 class="sub-title">SALUT Negeri Seribu Kubah</h6>
+                     <h2 class="title"><span>Pertanyaan yang</span> Sering <span> Diajukan</span></h2>
+                     {{-- <p class="content">In today's competitive business, the demand for efficient solutions has never been more critical.</p> --}}
                </div>
                <div class="accordion accordion-inner style-2 accordion-icon-left" id="accordionExample">
                      <div class="accordion-item">
                         <h2 class="accordion-header" id="headingOne">
                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                 Network Security & Protection
+                                 Apakah sudah di buka penerimaan mahasiswa Baru
                            </button>
                         </h2>
                         <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                            <div class="accordion-body">
-                                 <p>Accelerate innovation with world-class tech teams We'll match you to an entire remote team.</p>
+                                 <p>Ya, Pendaftaran Mahasiswa Baru Universitas Terbuka (UT) untuk masa registrasi 2025.2  TELAH RESMI DI BUKA MULAI  1 September 2025.</p>
                            </div>
                         </div>
                      </div>
                      <div class="accordion-item">
                         <h2 class="accordion-header" id="headingTwo">
                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                 Browser Safety & Farewell
+                                 Bagaimana kelembagaan UT
                            </button>
                         </h2>
                         <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
                            <div class="accordion-body">
-                                 <p>Accelerate innovation with world-class tech teams We'll match you to an entire remote team.</p>
+                                 <p>Universitas Terbuka (UT) adalah Perguruan Tinggi Negeri (PTN) yang berdiri sejak tahun 1984, berpusat di Pondok Cabe, Tangerang Selatan, Banten. UT berada langsung di bawah naungan Kementerian Pendidikan, Kebudayaan, Riset, dan Teknologi (Kemendikbudristek). Sebagai kampus negeri penyelenggara pendidikan jarak jauh (PJJ) / online</p>
                            </div>
                         </div>
                      </div>
                      <div class="accordion-item">
                         <h2 class="accordion-header" id="headingThree">
                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                 Infrastructure Technology
+                                 Bagaimana gambaran sistem kuliah di Universitas Terbuka
                            </button>
                         </h2>
                         <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
                            <div class="accordion-body">
-                                 <p>Accelerate innovation with world-class tech teams We'll match you to an entire remote team.</p>
+                                 <p class="font-bold">Fleksibel dan 100% Online</p>
+                                 <p class="font-bold">Belajar Mandiri namun Terarah</p>
+                                 <p class="font-bold">Evaluasi/Ujian Akhir Semester (UAS)</p>
+                                 <p class="font-bold">Resmi dan Bermutu</p>
+                                 <p>Dengan sistem perkuliahan tersebut, Universitas Terbuka menghadirkan pendidikan tinggi yang fleksibel, terjangkau, dan terpercaya. Model ini sangat sesuai bagi lulusan baru, pekerja, pendidik, maupun masyarakat umum yang ingin melanjutkan pendidikan tanpa harus meninggalkan kesibukan sehari-hari.</p>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingFour">
+                           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                 Bagaimana jadwal perkuliahan di UT
+                           </button>
+                        </h2>
+                        <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+                           <div class="accordion-body">
+                                 <p>Universitas Terbuka tidak menetapkan jadwal perkuliahan tetap seperti perguruan tinggi konvensional. Sistem pembelajaran di UT bersifat fleksibel, sehingga mahasiswa dapat mengatur sendiri waktu belajar sesuai dengan aktivitas dan kesibukan masing-masing.</p>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingFive">
+                           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                 Apakah di UT bisa kuliah sambil kerja?
+                           </button>
+                        </h2>
+                        <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
+                           <div class="accordion-body">
+                                 <p>Justru Universitas Terbuka memang dirancang khusus untuk masyarakat yang ingin melanjutkan pendidikan tinggi sambil tetap bekerja atau menjalankan aktivitas lain.</p>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingSix">
+                           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                                 Apa itu SALUT?
+                           </button>
+                        </h2>
+                        <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#accordionExample">
+                           <div class="accordion-body">
+                                 <p>SALUT (Sentra Layanan Universitas Terbuka) adalah pusat layanan resmi Universitas Terbuka (UT) yang tersebar di berbagai daerah di Indonesia, termasuk SALUT AWWABIN TANGERANG. Kehadiran SALUT bertujuan mendekatkan UT dengan mahasiswa dan masyarakat di daerah.</p>
                            </div>
                         </div>
                      </div>
@@ -502,55 +678,8 @@
       </div>
    </div>
    <!-- faq area end -->
-   <!-- counter area start -->
-   <div class="counter-area bg-relative bg-cover bg-center pd-top-110 pd-bottom-100">
-      <div class="container pd-bottom-90">
-         <div class="row">
-            <div class="custom-sm:w-1/2 custom-md:w-1/4  wow animate__animated animate__fadeInUp" data-wow-duration="0.8s">
-               <div class="single-counter-inner">
-                  <div class="thumb">
-                     <img src="{{ asset('assets/landing/images/icon/5.svg') }}" alt="img">
-                  </div>
-                  <h2 class="text-white mt-[24px] mb-[8px]"><span class="counter">200</span>+</h2>
-                  <p class="text-white">Team member</p>
-               </div>
-            </div>
-            <div class="custom-sm:w-1/2 custom-md:w-1/4  wow animate__animated animate__fadeInUp" data-wow-duration="0.8s"
-               data-wow-delay="0.3s">
-               <div class="single-counter-inner">
-                  <div class="thumb">
-                     <img src="{{ asset('assets/landing/images/icon/6.svg') }}" alt="img">
-                  </div>
-                  <h2 class="text-white mt-[24px] mb-[8px]"><span class="counter">10</span>k+</h2>
-                  <p class="text-white">Team member</p>
-               </div>
-            </div>
-            <div class="custom-sm:w-1/2 custom-md:w-1/4  wow animate__animated animate__fadeInUp" data-wow-duration="0.8s"
-               data-wow-delay="0.6s">
-               <div class="single-counter-inner">
-                  <div class="thumb">
-                     <img src="{{ asset('assets/landing/images/icon/7.svg') }}" alt="img">
-                  </div>
-                  <h2 class="text-white mt-[24px] mb-[8px]"><span class="counter">200</span>+</h2>
-                  <p class="text-white">Team member</p>
-               </div>
-            </div>
-            <div class="custom-sm:w-1/2 custom-md:w-1/4  wow animate__animated animate__fadeInUp" data-wow-duration="0.8s"
-               data-wow-delay="0.9s">
-               <div class="single-counter-inner">
-                  <div class="thumb">
-                     <img src="{{ asset('assets/landing/images/icon/8.svg') }}" alt="img">
-                  </div>
-                  <h2 class="text-white mt-[24px] mb-[8px]"><span class="counter">200</span>+</h2>
-                  <p class="text-white">Team member</p>
-               </div>
-            </div>
-         </div>
-      </div>
-   </div>
-   <!-- counter area end -->
    <!-- case area start -->
-   <section class="case-area">
+   <section class="case-area pd-top-110">
       <div class="container-fluid">
          <div class="row justify-content-center">
             <div class="w-full custom-lg:w-11/12">
@@ -558,14 +687,14 @@
                   <div class="w-full custom-xs:w-6/12 custom-md:w-1/3 custom-lg:w-3/12">
                      <div class="case__single wow animate__animated animate__fadeInUp" data-wow-duration="0.8s">
                         <div class="thumb">
-                           <img src="{{ asset('assets/landing/images/steps/one-l.png') }}" alt="Image">
+                           <img src="{{ asset('assets/landing/images/IMGUT1.png') }}" alt="Image">
                         </div>
                         <div class="details">
                            <div class="int">
-                              <h6><a href="about.html">It Managment system</a></h6>
+                              <h6><a href="about.html">Lokasi</a></h6>
                            </div>
                            <div class="tag">
-                              <p>Art Of Direction</p>
+                              <p>SALUT Negeri Seribu Kubah</p>
                            </div>
                         </div>
                      </div>
@@ -573,14 +702,14 @@
                   <div class="w-full custom-xs:w-6/12 custom-md:w-1/3 custom-lg:w-3/12">
                      <div class="case__single wow animate__animated animate__fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.3s">
                         <div class="thumb">
-                           <img src="{{ asset('assets/landing/images/steps/two-l.png') }}" alt="Image">
+                           <img src="{{ asset('assets/landing/images/IMGUT2.png') }}" alt="Image">
                         </div>
                         <div class="details">
                            <div class="int">
-                              <h6><a href="about.html">It Managment system</a></h6>
+                              <h6><a href="about.html">Mahasiswa</a></h6>
                            </div>
                            <div class="tag">
-                              <p>Art Of Direction</p>
+                              <p>SALUT Negeri Seribu Kubah</p>
                            </div>
                         </div>
                      </div>
@@ -588,14 +717,14 @@
                   <div class="w-full custom-xs:w-6/12 custom-md:w-1/3 custom-lg:w-3/12">
                      <div class="case__single wow animate__animated animate__fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.6s">
                         <div class="thumb">
-                           <img src="{{ asset('assets/landing/images/steps/three-l.png') }}" alt="Image">
+                           <img src="{{ asset('assets/landing/images/IMGUT3.png') }}" alt="Image">
                         </div>
                         <div class="details">
                            <div class="int">
-                              <h6><a href="about.html">It Managment system</a></h6>
+                              <h6><a href="about.html">Administrasi</a></h6>
                            </div>
                            <div class="tag">
-                              <p>Art Of Direction</p>
+                              <p>SALUT Negeri Seribu Kubah</p>
                            </div>
                         </div>
                      </div>
@@ -603,14 +732,14 @@
                   <div class="w-full custom-xs:w-6/12 custom-md:w-1/3 custom-lg:w-3/12">
                      <div class="case__single wow animate__animated animate__fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.9s">
                         <div class="thumb">
-                           <img src="{{ asset('assets/landing/images/steps/four-l.png') }}" alt="Image">
+                           <img src="{{ asset('assets/landing/images/IMGUT4.png') }}" alt="Image">
                         </div>
                         <div class="details">
                            <div class="int">
-                              <h6><a href="about.html">It Managment system</a></h6>
+                              <h6><a href="about.html">Kegiatan</a></h6>
                            </div>
                            <div class="tag">
-                              <p>Art Of Direction</p>
+                              <p>SALUT Negeri Seribu Kubah</p>
                            </div>
                         </div>
                      </div>
@@ -621,66 +750,6 @@
       </div>
    </section>
    <!-- case area end -->
-   <!-- total area start -->
-   <section class="total-area">
-      <div class="container">
-         <div class="row justify-content-center">
-            <div class="w-full custom-md:w-1/2">
-               <div class="section-title text-center wow animate__animated animate__fadeInUp" data-wow-duration="0.8s">
-                  <h6 class="sub-title">Designing for the future</h6>
-                  <h2 class="title capitalize"><span>Become totally</span> secured
-                     <span>by</span> Following 3 <span>steps</span>
-                  </h2>
-               </div>
-            </div>
-         </div>
-         <div class="row tc-p">
-            <div class="w-full custom-sm:w-1/2 custom-md:w-1/3">
-               <div class="total-single wow animate__animated animate__fadeInUp" data-wow-duration="0.8s">
-                  <div class="thumb">
-                     <img src="{{ asset('assets/landing/images/steps/two.png') }}" alt="Image">
-                     <span>01</span>
-                  </div>
-                  <div class="content">
-                     <h4>Choose Security Package</h4>
-                     <p>Far far away, behind the word mountains
-                        and Consonantia, there live the
-                     </p>
-                  </div>
-               </div>
-            </div>
-            <div class="w-full custom-sm:w-1/2 custom-md:w-1/3">
-               <div class="total-single wow animate__animated animate__fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.3s">
-                  <div class="thumb">
-                     <img src="{{ asset('assets/landing/images/steps/one.png') }}" alt="Image">
-                     <span>02</span>
-                  </div>
-                  <div class="content">
-                     <h4>Prepare for security test</h4>
-                     <p>Far far away, behind the word mountains
-                        and Consonantia, there live the
-                     </p>
-                  </div>
-               </div>
-            </div>
-            <div class="w-full custom-sm:w-1/2 custom-md:w-1/3">
-               <div class="total-single wow animate__animated animate__fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.6s">
-                  <div class="thumb">
-                     <img src="{{ asset('assets/landing/images/steps/three.png') }}" alt="Image">
-                     <span>03</span>
-                  </div>
-                  <div class="content">
-                     <h4>Get the result & solution</h4>
-                     <p>Far far away, behind the word mountains
-                        and Consonantia, there live the
-                     </p>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </div>
-   </section>
-   <!-- total area end -->
    <!-- contact-inner-1 start -->
    <div class="contact-area">
       <div class="container">
@@ -865,71 +934,6 @@
       </div>
    </div>
    <!-- team area end -->
-   <!-- pricing-area start -->
-   <div class="pricing-area pd-top-120 pd-bottom-90">
-      <div class="container">
-         <div class="row justify-content-center">
-            <div class="w-full custom-lg:w-5/12">
-               <div class="section-title text-center wow animate__animated animate__fadeInUp" data-wow-duration="0.8s">
-                  <h6 class="sub-title">Pricing plan</h6>
-                  <h2 class="title capitalize">Our <span>business pricing</span> plan
-                     you <span>might like</span>
-                  </h2>
-               </div>
-            </div>
-         </div>
-         <div class="row">
-            <div class="custom-md:w-1/3 custom-sm:w-1/2">
-               <div class="single-pricing-inner style-3 pa-o wow animate__animated animate__fadeInUp" data-wow-duration="0.8s">
-                  <h2 class="mb-[16px]">$19 <sub>/mo</sub></h2>
-                  <h5>Starter</h5>
-                  <ul>
-                     <li><i class="fa fa-check"></i>Mobile App Development</li>
-                     <li><i class="fa fa-check"></i>Branding & Identity</li>
-                     <li><i class="fa fa-check"></i>Email Marketing & Automation</li>
-                     <li><i class="fa fa-check"></i>E-commerce Solutions</li>
-                     <li class="hide"><i class="fa fa-check"></i>Social Media Management</li>
-                     <li class="hide"><i class="fa fa-check"></i>Video & Animation Production </li>
-                  </ul>
-                  <a class="btn btn-black border-radius border-radius-0 w-100" href="pricing.html">Get Started</a>
-               </div>
-            </div>
-            <div class="custom-md:w-1/3 custom-sm:w-1/2">
-               <div class="single-pricing-inner style-3 price-active pa-t wow animate__animated animate__fadeInUp"
-                  data-wow-duration="0.8s" data-wow-delay="0.3s">
-                  <h2 class="mb-[16px]">$19 <sub>/mo</sub></h2>
-                  <h5>Professional</h5>
-                  <ul>
-                     <li><i class="fa fa-check"></i>Mobile App Development</li>
-                     <li><i class="fa fa-check"></i>Branding & Identity</li>
-                     <li><i class="fa fa-check"></i>Email Marketing & Automation</li>
-                     <li><i class="fa fa-check"></i>E-commerce Solutions</li>
-                     <li class="hide"><i class="fa fa-check"></i>Social Media Management</li>
-                     <li class="hide"><i class="fa fa-check"></i>Video & Animation Production </li>
-                  </ul>
-                  <a class="btn btn-black border-radius border-radius-0 w-100" href="pricing.html">Get Started</a>
-               </div>
-            </div>
-            <div class="custom-md:w-1/3 custom-sm:w-1/2">
-               <div class="single-pricing-inner style-3 pa-h wow animate__animated animate__fadeInUp" data-wow-duration="0.8s"
-                  data-wow-delay="0.6s">
-                  <h2 class="mb-[16px]">$19 <sub>/mo</sub></h2>
-                  <h5>Enterprise</h5>
-                  <ul>
-                     <li><i class="fa fa-check"></i>Mobile App Development</li>
-                     <li><i class="fa fa-check"></i>Branding & Identity</li>
-                     <li><i class="fa fa-check"></i>Email Marketing & Automation</li>
-                     <li><i class="fa fa-check"></i>E-commerce Solutions</li>
-                     <li class="hide"><i class="fa fa-check"></i>Social Media Management</li>
-                     <li class="hide"><i class="fa fa-check"></i>Video & Animation Production </li>
-                  </ul>
-                  <a class="btn btn-black border-radius border-radius-0 w-100" href="pricing.html">Get Started</a>
-               </div>
-            </div>
-         </div>
-      </div>
-   </div>
-   <!-- pricing-area start -->
    <!-- blog-area start -->
    <div class="blog-area pd-top-120 pd-bottom-90">
       <div class="container">
