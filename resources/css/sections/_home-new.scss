@@ -154,7 +154,7 @@
 
   // partner
   .partner-14 {
-    @apply pt-[120px];
+    @apply pt-[70px];
 
     .partner__slider-single {
       @apply text-center;
@@ -223,7 +223,7 @@
     }
 
     .about-area-of {
-      @apply mt-[40px] flex flex-wrap items-center gap-[30px] gap-y-[24px];
+      @apply flex flex-wrap items-center gap-[30px] gap-y-[24px];
     }
 
     .tr-g {
@@ -498,7 +498,7 @@
       }
 
       .team-social-inner {
-        @apply min-w-max;
+        @apply w-full max-w-[200px];
       }
 
       h5 a {
@@ -619,7 +619,7 @@
     }
 
     .details {
-      @apply max-w-[480px];
+      @apply max-w-full;
 
       h4 a {
         @apply font-bold text-[#150E3D];
@@ -842,7 +842,7 @@ i {
 }
 
 .bi-31 {
-  @apply bg-[url('../images/bg/contact-bg.png')] bg-cover bg-center bg-no-repeat;
+  @apply bg-[url('assets/landing/images/BG2.png')] bg-cover bg-center bg-no-repeat;
 }
 
 .fc-t {

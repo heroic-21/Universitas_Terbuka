@@ -6,8 +6,8 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-   <title>AglieTech - IT Solutions & Technology Tailwind CSS Template</title>
-   <link rel=icon href="{{ asset('assets/landing/images/favicon.png') }}" sizes="20x20" type="image/png">
+   <title>SALUT BAGANSIAPIAPI</title>
+   <link rel="icon" href="{{ asset('assets/landing/images/UTICON.png') }}?v=1" type="image/png">
    @vite(['resources/css/app-landing.scss', 'resources/js/app-landing.js'])
 </head>
 
@@ -47,7 +47,7 @@
             </button>
          </div>
          <div class="logo">
-            <a href="index.html"><img src="{{ asset('assets/landing/images/logo.png') }}" alt="img"></a>
+            <a href="index.html"><img src="{{ asset('assets/landing/images/LOGOSALUT.png') }}" alt="img"></a>
          </div>
          <div class="nav-right-part nav-right-part-mobile">
             <a class="search-bar-btn" href="index.html">
@@ -58,120 +58,55 @@
             <ul class="navbar-nav menu-open custom-md:!text-center custom-md:ps-[48px]">
                <li class="menu-item-has-children">
                   <a href="index.html">Beranda</a>
-                  <ul class="sub-menu">
-                     <li><a href="index.html">Software Agency</a></li>
-                     <li><a href="index-2.html">SaaS App Landing</a></li>
-                     <li><a href="index-3.html">Payments Solution</a></li>
-                     <li><a href="index-4.html">Startup / Software Company</a></li>
-                     <li><a href="index-5.html">Artificial Intelligence</a></li>
-                     <li><a href="index-6.html">NFT Service</a></li>
-                     <li><a href="index-7.html">Cyber Security</a></li>
-                     <li><a href="index-8.html">Hardware Service</a></li>
-                     <li><a href="index-9.html">ICO Landing</a></li>
-                     <li><a href="index-10.html">Personal Portfolio</a></li>
-                     <li><a href="index-11.html">SEO Service</a></li>
-                     <li><a href="index-12.html">Business Consultancy</a></li>
-                     <li><a href="index-13.html">IT Solution</a></li>
-                     <li><a href="index-14.html">IT Agency Two</a></li>
-                  </ul>
                </li>
                <li class="menu-item-has-children">
                   <a href="index.html">Akademik</a>
                   <ul class="sub-menu">
-                     <li><a href="service.html">Service 01</a></li>
-                     <li><a href="service-2.html">Service 02</a></li>
-                     <li><a href="service-3.html">Service 03</a></li>
-                     <li><a href="service-4.html">Service 04</a></li>
-                     <li><a href="service-5.html">Service 05</a></li>
-                     <li><a href="service-details.html">Service Single</a></li>
+                     <li><a href="universitas-terbuka.html">Universitas Terbuka</a></li>
+                     <li><a href="akreditasi.html">Akreditasi</a></li>
+                     <li><a href="program-studi.html">Program Studi</a></li>
+                     <li><a href="kegiatan-ut-bagansiapiapi.html">Kegiatan UT Bagansiapiapi</a></li>
+                     <li><a href="kalender-akademik.html">Kalender Akademik</a></li>
+                     <li><a href="cek-nilai.html">Cek Nilai</a></li>
+                     <li><a href="katalog-digital.html">Katalog Digital</a></li>
+                     <li><a href="surat-keterangan.html">Surat Keterangan</a></li>
+                     <li><a href="seminar-wisuda.html">Seminar dan Wisuda</a></li>
+                     <li><a href="ormawa.html">Ormawa</a></li>
                   </ul>
                </li>
                <li class="menu-item-has-children">
                   <a href="index.html">Pendaftaran</a>
                   <ul class="sub-menu">
-                     <li><a href="about.html">About Us</a></li>
-                     <li><a href="team.html">Team 01</a></li>
-                     <li><a href="team-2.html">Team 02</a></li>
-                     <li><a href="team-3.html">Team 03</a></li>
-                     <li><a href="team-details.html">Team Details</a></li>
-                     <li><a href="pricing.html">Pricing 01</a></li>
-                     <li><a href="pricing-2.html">Pricing 02</a></li>
+                     <li><a href="biaya-pendidikan.html">Biaya Pendidikan</a></li>
+                     <li><a href="pendaftaran.html">Pendaftaran</a></li>
+                     <li><a href="syarat-pendaftaran.html">Syarat Pendaftaran</a></li>
+                     <li><a href="unduh-formulir.html">Unduh Formulir</a></li>
+                     <li><a href="brosur.html">Brosur</a></li>
+                     <li><a href="informasi-pendaftaran.html">Informasi Pendaftaran</a></li>
                   </ul>
                </li>
-               <li class="menu-item-has-children mega-menu">
+               <li class="menu-item-has-children">
                   <a href="index.html">Layanan UT</a>
-                  <div class="sub-menu">
-                     <div class="row">
-                        <div class="custom-md:w-1/4">
-                           <ul>
-                              <li><a href="index.html">Software Agency</a></li>
-                              <li><a href="index-2.html">SaaS App Landing</a></li>
-                              <li><a href="index-3.html">Payments Solution</a></li>
-                              <li><a href="index-4.html">Startup / Software Company</a></li>
-                              <li><a href="index-5.html">Artificial Intelligence</a></li>
-                              <li><a href="index-6.html">NFT Service</a></li>
-                              <li><a href="index-7.html">Cyber Security</a></li>
-                              <li><a href="index-8.html">Hardware Service</a></li>
-                              <li><a href="index-9.html">ICO Landing</a></li>
-                              <li><a href="index-10.html">Personal Portfolio</a></li>
-                           </ul>
-                        </div>
-                        <div class="custom-md:w-1/4">
-                           <ul>
-                              <li><a href="service.html">Service 01</a></li>
-                              <li><a href="service-2.html">Service 02</a></li>
-                              <li><a href="service-3.html">Service 03</a></li>
-                              <li><a href="service-4.html">Service 04</a></li>
-                              <li><a href="service-5.html">Service 05</a></li>
-                              <li><a href="service-details.html">Service Single</a></li>
-                           </ul>
-                        </div>
-                        <div class="custom-md:w-1/4">
-                           <ul>
-                              <li><a href="project.html">Project 01</a></li>
-                              <li><a href="project-2.html">Project 02</a></li>
-                              <li><a href="project-3.html">Project 03</a></li>
-                              <li><a href="project-details.html">Case Study Details</a></li>
-                              <li><a href="pricing.html">Pricing 01</a></li>
-                              <li><a href="pricing-2.html">Pricing 02</a></li>
-                           </ul>
-                        </div>
-                        <div class="custom-md:w-1/4">
-                           <ul>
-                              <li><a href="about.html">About Us</a></li>
-                              <li><a href="team.html">Team 01</a></li>
-                              <li><a href="team-2.html">Team 02</a></li>
-                              <li><a href="team-3.html">Team 03</a></li>
-                              <li><a href="team-details.html">Team Details</a></li>
-                           </ul>
-                        </div>
-                     </div>
-                  </div>
-               </li>
-               <li class="menu-item-has-children">
-                  <a href="index.html">Blog</a>
                   <ul class="sub-menu">
-                     <li><a href="blog.html">Blog 01</a></li>
-                     <li><a href="blog-2.html">Blog 02</a></li>
-                     <li><a href="blog-3.html">Blog 03</a></li>
-                     <li><a href="blog-4.html">Blog 04</a></li>
-                     <li><a href="blog-details.html">Blog Details</a></li>
+                     <li><a href="website-ut.html">Website UT</a></li>
+                     <li><a href="myut.html">MyUT</a></li>
+                     <li><a href="elearning.html">E-Learning</a></li>
+                     <li><a href="lms-ut.html">LMS UT</a></li>
+                     <li><a href="tutorial-online.html">Tutorial Online Pembelajaran</a></li>
+                     <li><a href="unggah-tugas.html">Unggah Tugas</a></li>
+                     <li><a href="unggah-tugas-praktek.html">Unggah Tugas Praktek</a></li>
+                     <li><a href="pddikti.html">PDDikti</a></li>
                   </ul>
                </li>
                <li class="menu-item-has-children">
-                  <a href="index.html">Galeri</a>
-                  <ul class="sub-menu">
-                     <li><a href="blog.html">Blog 01</a></li>
-                     <li><a href="blog-2.html">Blog 02</a></li>
-                     <li><a href="blog-3.html">Blog 03</a></li>
-                     <li><a href="blog-4.html">Blog 04</a></li>
-                     <li><a href="blog-details.html">Blog Details</a></li>
-                  </ul>
+                  <a href="index.html">Berita</a>
+               </li>
+               <li class="menu-item-has-children">
+                  <a href="index.html">Tentang Kami</a>
                </li>
             </ul>
          </div>
          <div class="nav-right-part nav-right-part-desktop custom-md:inline-flex items-center">
-            <a class="btn btn-border-base" href="about.html">Login Admin</a>
             <a class="navbar-phone custom-lg:!inline-block !hidden" href="tel:123-456789">
                <span class="icon">
                   <img src="{{ asset('assets/landing/images/icon/1.png') }}" alt="img">
@@ -184,7 +119,7 @@
    </nav>
    <!-- navbar end -->
    <!-- banner start -->
-   <div class="banner-14 banner-area bg-relative banner-area-1 pd-bottom-100 bg-cover bg-center bi-26">
+   <div class="banner-14 banner-area bg-relative banner-area-1 bg-cover bg-center bi-26">
       <div class="container">
          <div class="row">
             <div class="w-full custom-md:w-8/12 custom-lg:w-6/12">
@@ -333,17 +268,6 @@
                   <div class="about-area-of">
                      <div class="area-left">
                         <a class="btn btn-base mt-0" href="about.html" data-aos="fade-up" data-aos-duration="800" data-aos-delay="600" href="about.html">Daftar UT Sekarang</a>
-                     </div>
-                     <div class="area-right">
-                        <div class="img-gp-wrap">
-                           <div class="img-gp">
-                              <img src="{{ asset('assets/landing/images/about/37.png') }}" alt="Image">
-                              <img src="{{ asset('assets/landing/images/about/38.png') }}" alt="Image">
-                              <img src="{{ asset('assets/landing/images/about/36.png') }}" alt="Image">
-                           </div>
-                           <h5>2.3K+ Pendaftar</h5>
-                        </div>
-                        <p class="mb-0">400+ Mahasiswa Aktif</p>
                      </div>
                   </div>
                </div>
@@ -758,81 +682,57 @@
                <div class="custom-md:w-1/2 wow animate__animated animate__fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.3s">
                   <div class="contact-inner">
                      <h6 class="subtitle wow animate__animated animate__fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.3s">
-                        Designing for the future</h6>
-                     <h2 class="title wow animate__animated animate__fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.6s">Scale
-                        <span>your business </span> <br>
-                        & <span>revenue</span> to the <span>next</span>
+                        SALUT Negeri Seribu Kubah</h6>
+                     <h2 class="title wow animate__animated animate__fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.6s">Keunggulan
+                        <span>Universitas Terbuka </span>
                      </h2>
-                     <p class="content custom-lg:pe-[48px] wow animate__animated animate__fadeInUp" data-wow-duration="0.8s"
-                        data-wow-delay="0.9s">In today's competitive business, the demand for efficient and
-                        cost-effective IT solutions has never been more critical.
-                     </p>
-                     <div class="contact-single-wrapper">
-                        <div class="contact-single">
-                           <div class="th">
-                              <img src="{{ asset('assets/landing/images/icon/6.png') }}" alt="Image">
-                           </div>
-                           <div class="con">
-                              <p>Organizations and <br>
-                                 recognized work
-                              </p>
-                           </div>
-                        </div>
-                        <div class="contact-single">
-                           <div class="th">
-                              <img src="{{ asset('assets/landing/images/icon/7.png') }}" alt="Image">
-                           </div>
-                           <div class="con">
-                              <p>Organizations and <br>
-                                 recognized work
-                              </p>
-                           </div>
-                        </div>
-                     </div>
-                     <ul class="!mt-[16px]">
-                        <li><i class="fas fa-check"></i>Dedicated Tech Services</li>
-                        <li><i class="fas fa-check"></i>Dedicated Tech Services</li>
+                     <ul>
+                     <li><i class="fa fa-check"></i>PTN dengan Akreditasi UNGGUL/A dari BAN-PT dan Internasional (AAOU, ICDE,ASIC)</li>
+                     <li><i class="fa fa-check"></i>Banyak program beasiswa tersedia</li>
+                     <li><i class="fa fa-check"></i>Tanpa batasan lulusan tahun ijazah (SMA/SMK/MA/MAK/PAKET-C/SMA-TERBUKA/MUADALAH-Setara MA/ dan SLTA sederajat)</li>
+                     <li><i class="fa fa-check"></i>Tanpa tes masuk, KKN, Skripsi dan DO</li>
+                     <li><i class="fa fa-check"></i>Sistem perkuliahan online & fleksibel, perangkat perkuliahan dapat mengunakan PC, Smartphone, laptop, iPad, Tablet</li>
+                     <li><i class="fa fa-check"></i>Teknologi ITC Mutahir dan Canggih dengan berbagai platform Digital</li>
+                     <li><i class="fa fa-check"></i>Biaya terjangkau mulai dari Rp. 1,3 Jt/Smtr (SIPAS) dan Rp. 36 Rbu /SKS (NON SIPAS)</li>
+                     <li><i class="fa fa-check"></i>Kurikulum Sesuai Kebutuhan Industri</li>
                      </ul>
-                     <a class="btn btn-base btn-white wow animate__animated animate__fadeInUp mt-[48px]" data-wow-duration="0.8s"
-                        data-wow-delay="0.6s" href="about.html">Get Started</a>
                   </div>
                </div>
                <div class="custom-md:w-1/2 custom-lg:w-5/12 offset-xl-1 wow animate__animated animate__fadeInRight"
                   data-wow-duration="0.8s" data-wow-delay="0.3s">
                   <div class="section-title !mb-0">
-                     <h6 class="sub-title">Contact Us</h6>
-                     <h2 class="title">Get In Touch</h2>
-                     <p class="content">For your car we will do everything advice design in us repairs and maintenance.
-                        We are the some</p>
+                     <h6 class="sub-title">Butuh Informasi Lebih Lanjut?</h6>
+                     <h2 class="title">Hubungi Kami</h2>
+                     <p class="content">SALUT UT Bagansiapiapi siap membantu Anda. Silakan isi formulir berikut untuk pertanyaan seputar pendaftaran, program studi, atau layanan akademik.</p>
                      <form class="mt-[24px]">
                         <div class="row">
                            <div class="custom-md:w-1/2">
                               <div class="single-input-inner style-border">
-                                 <input type="text" placeholder="Your Name">
+                                 <input type="text" placeholder="Nama Lengkap">
                               </div>
                            </div>
                            <div class="custom-md:w-1/2">
                               <div class="single-input-inner style-border">
-                                 <input type="text" placeholder="Your Email">
+                                 <input type="text" placeholder="Email">
                               </div>
                            </div>
                            <div class="custom-md:w-1/2">
                               <div class="single-input-inner style-border">
-                                 <input type="text" placeholder="Your Phone">
+                                 <input type="text" placeholder="Nomor HP">
                               </div>
                            </div>
                            <div class="custom-md:w-1/2">
                               <div class="single-input-inner style-border">
-                                 <input type="text" placeholder="Your Subject">
+                                 <input type="text" placeholder="Alamat">
                               </div>
                            </div>
                            <div class="custom-md:w-full">
                               <div class="single-input-inner style-border">
-                                 <textarea placeholder="Message"></textarea>
+                                 <textarea placeholder="Pesan"></textarea>
                               </div>
                            </div>
                            <div class="w-full">
-                              <a class="btn btn-black mt-0 w-100 border-radius-5" href="index.html">Submit now</a>
+                              <a class="btn btn-black mt-0 w-100 border-radius-5" href="index.html">Kirim</a>
                            </div>
                         </div>
                      </form>
@@ -848,24 +748,23 @@
    <div class="team-area bg-relative pd-top-120">
       <div class="container">
          <div class="section-title text-center wow animate__animated animate__fadeInUp" data-wow-duration="0.8s">
-            <h6 class="sub-title">MEET OUR EXPERTS</h6>
-            <h2 class="title">We've <span>Exclusive Team</span> member</h2>
+            <h6 class="sub-title">Alumni UT</h6>
+            <h2 class="title">Apa Kata <span>Alumni</span> Universitas Terbuka</h2>
          </div>
          <div class="row bs-t">
             <div class="custom-sm:w-1/2 custom-md:w-1/4  custom-lg:w-3/12">
                <div class="single-team-inner text-center wow animate__animated animate__fadeInUp" data-wow-duration="0.8s">
                   <div class="thumb">
-                     <img src="{{ asset('assets/landing/images/team/11.png') }}" alt="img">
-                     <ul class="team-social-inner">
-                        <li><a href="index.html"><i class="fab fa-facebook-f"></i></a></li>
-                        <li><a href="index.html"><i class="fab fa-twitter"></i></a></li>
-                        <li><a href="index.html"><i class="fab fa-youtube"></i></a></li>
-                        <li><a href="index.html"><i class="fab fa-instagram"></i></a></li>
-                     </ul>
+                     <img src="{{ asset('assets/landing/images/IMGALUMNI1.png') }}" alt="img">
+                        <p class="team-social-inner">Sistem Informasi</p>
                   </div>
                   <div class="details">
-                     <h5><a href="team-details.html">Devon Lane</a></h5>
-                     <p>Merketing Department</p>
+                     <h5><a href="#">Linda Amalia Sari</a></h5>
+                     <p>Menteri Pemberdayaan Perempuan dan Perlindungan Anak</p>
+                     <blockquote class="italic text-gray-600 mt-2">
+                        "Universitas Terbuka memberi saya kesempatan untuk terus menimba ilmu di tengah kesibukan. 
+                        Fleksibilitas sistem belajarnya membuat pendidikan tetap bisa saya jalani"
+                     </blockquote>
                   </div>
                </div>
             </div>
@@ -924,27 +823,20 @@
                </div>
             </div>
          </div>
-         <div class="row">
-            <div class="w-full">
-               <div class="text-center mt-[48px]">
-                  <a class="btn btn-base" href="team.html">Explore More</a>
-               </div>
-            </div>
-         </div>
       </div>
    </div>
    <!-- team area end -->
    <!-- blog-area start -->
-   <div class="blog-area pd-top-120 pd-bottom-90">
+   <div class="blog-area pd-top-100">
       <div class="container">
          <div class="section-title wow animate__animated animate__fadeInUp" data-wow-duration="0.8s">
             <div class="row">
                <div class="custom-md:w-7/12">
-                  <h6 class="sub-title">Recent Blogs</h6>
-                  <h2 class="title">Blog & <span>Insights</span></h2>
+                  <h6 class="sub-title">Seputar UT Bagansiapiapi Terbaru</h6>
+                  <h2 class="title">Blog & <span>Pengumuman</span></h2>
                </div>
-               <div class="custom-md:w-5/12    custom-md:!text-end self-end">
-                  <a class="btn btn-base" href="blog.html">View More</a>
+               <div class="custom-md:w-5/12 custom-md:!text-end self-end">
+                  <a class="btn btn-base" href="blog.html">Lihat Semua</a>
                </div>
             </div>
          </div>
@@ -956,15 +848,14 @@
                   </div>
                   <div class="details">
                      <ul class="blog-meta p-0">
-                        <li> Blog</li>
+                        <li>Berita</li>
                         <li><span></span></li>
-                        <li>10 Min</li>
+                        <li>2 Hari</li>
                      </ul>
-                     <h4 class="mb-[16px]"><a href="blog-details.html">Building for the real world</a></h4>
-                     <p class="mb-[48px]">How friends from college went on to build one powerful
-                        platform (hint: it was ours).
+                     <h4 class="mb-[16px]"><a href="blog-details.html">Seleksi Mahasiswa Baru UT Bagansiapiapi 2025/2026</a></h4>
+                     <p class="mb-[48px]">Universitas Terbuka Bagansiapiapi resmi membuka pendaftaran mahasiswa baru untuk Tahun Akademik 2025/2026. Program ini memberikan kesempatan bagi siapa saja yang ingin melanjutkan pendidikan tinggi dengan sistem belajar yang fleksibel, terjangkau, dan didukung teknologi digital modern.
                      </p>
-                     <a class="btn btn-border-base" href="blog-details.html">Read More <i
+                     <a class="btn btn-border-base" href="blog-details.html">Baca Selengkapnya <i
                            class="fa fa-arrow-right"></i></a>
                   </div>
                </div>
@@ -976,16 +867,22 @@
                   </div>
                   <div class="details">
                      <ul class="blog-meta p-0">
-                        <li> Blog</li>
+                        <li>Pengumuman</li>
                         <li><span></span></li>
-                        <li>10 Min</li>
+                        <li>2 Hari</li>
                      </ul>
-                     <h4 class="mb-[16px]"><a href="blog-details.html">Building for the real world</a></h4>
-                     <p class="mb-[48px]">How friends from college went on to build one powerful
-                        platform (hint: it was ours).
+                     <h4 class="mb-[16px]">
+                        <a href="blog-details.html">Penerimaan Mahasiswa Baru UT Bagansiapiapi 2025/2026</a>
+                     </h4>
+                     <p class="mb-[48px]">
+                        Dengan hormat, Universitas Terbuka Bagansiapiapi mengumumkan bahwa pendaftaran 
+                        mahasiswa baru Tahun Akademik 2025/2026 telah dibuka. Calon mahasiswa dapat mengikuti 
+                        proses pendaftaran secara online melalui laman resmi UT. Informasi lengkap mengenai 
+                        persyaratan, jadwal, dan tata cara pendaftaran tersedia pada tautan berikut.
                      </p>
-                     <a class="btn btn-border-base" href="blog-details.html">Read More <i
-                           class="fa fa-arrow-right"></i></a>
+                     <a class="btn btn-border-base" href="blog-details.html">
+                        Baca Selengkapnya <i class="fa fa-arrow-right"></i>
+                     </a>
                   </div>
                </div>
             </div>
@@ -998,29 +895,22 @@
       <div class="footer-subscribe">
          <div class="container">
             <div class="footer-subscribe-inner bg-cover bg-center wow animate__animated animate__fadeInUp" data-wow-duration="0.8s">
-               <div class="row">
-                  <div class="custom-md:w-1/2">
-                     <h2 class="custom-md:mb-0 mb-[16px]">Subscribe To Our Newsletter</h2>
-                  </div>
-                  <div class="custom-md:w-1/2 self-center    custom-md:!text-end">
-                     <input type="text" placeholder="Your e-mail address">
-                     <a class="btn btn-black border-radius-0" href="index.html">Submit now</a>
-                  </div>
-               </div>
+               
             </div>
          </div>
       </div>
       <div class="container">
          <div class="row">
-            <div class="custom-sm:w-1/2 custom-md:w-1/4 ">
+            <div class="custom-sm:w-1/2 custom-md:w-1/4">
                <div class="widget widget_about wow animate__animated animate__fadeInUp" data-wow-duration="0.8s">
                   <div class="thumb">
-                     <img src="{{ asset('assets/landing/images/logo2.png') }}" alt="img">
+                     <img src="{{ asset('assets/landing/images/LOGOSALUT2.png') }}" alt="img">
                   </div>
                   <div class="details">
-                     <p>Melbourne is simply is dumiomy is text Lorem Ipsum is simply</p>
-                     <p class="mt-[16px]"><i class="fa fa-phone-alt"></i> (+888) 123 456 765</p>
-                     <p class="mt-[8px]"><i class="fas fa-envelope"></i> (+888) 123 456 765</p>
+                     <p>Layanan Pendaftaran: Buka Hari Senin–Minggu  Jam 09.00 –17.00</p>
+                     <p class="mt-[16px]"><i class="fa fa-map-marker-alt"></i>Alamat: Jl. Bakti No.17, Bagan Barat, Bangko, Rokan Hilir Regency, Riau 28912</p>
+                     <p class="mt-[16px]"><i class="fa fa-phone-alt"></i>Admin 1: 0852-4622-0297</p>
+                     <p class="mt-[8px]"><i class="fas fa-phone-alt"></i>Admin 2: 0822-7626-7809</p>
                      <ul class="social-media">
                         <li>
                            <a href="index.html">
@@ -1048,63 +938,46 @@
             </div>
             <div class="custom-sm:w-1/2 custom-md:w-1/4 ">
                <div class="widget widget_nav_menu wow animate__animated animate__fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.3s">
-                  <h4 class="widget-title">Our Service</h4>
+                  <h4 class="widget-title">Layanan Kami</h4>
                   <ul>
-                     <li><a href="service.html"><i class="fas fa-arrow-right"></i> Ui Design</a></li>
-                     <li><a href="service.html"><i class="fas fa-arrow-right"></i> Web design</a></li>
-                     <li><a href="service.html"><i class="fas fa-arrow-right"></i> Digital marketing </a></li>
-                     <li><a href="service.html"><i class="fas fa-arrow-right"></i> Video Editing</a></li>
-                     <li><a href="service.html"><i class="fas fa-arrow-right"></i> Pc Repairs</a></li>
-                     <li><a href="service.html"><i class="fas fa-arrow-right"></i> Web Development</a></li>
+                     <li><a href="service.html"><i class="fas fa-arrow-right"></i> Informasi Pendaftaran</a></li>
+                     <li><a href="service.html"><i class="fas fa-arrow-right"></i> Pendaftaran</a></li>
+                     <li><a href="service.html"><i class="fas fa-arrow-right"></i> Unduh Formulir </a></li>
+                     <li><a href="service.html"><i class="fas fa-arrow-right"></i> Syarat Perndaftaran</a></li>
                   </ul>
                </div>
             </div>
             <div class="custom-sm:w-1/2 custom-md:w-1/4 ">
                <div class="widget widget_nav_menu wow animate__animated animate__fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.6s">
-                  <h4 class="widget-title">Pay links</h4>
+                  <h4 class="widget-title">Akses Cepat</h4>
                   <ul>
-                     <li><a href="service.html"><i class="fas fa-arrow-right"></i> Credit industrys</a></li>
-                     <li><a href="service.html"><i class="fas fa-arrow-right"></i> Reasearch sector</a></li>
-                     <li><a href="service.html"><i class="fas fa-arrow-right"></i> Finance Sector </a></li>
-                     <li><a href="service.html"><i class="fas fa-arrow-right"></i> Credit industrys</a></li>
-                     <li><a href="service.html"><i class="fas fa-arrow-right"></i> Reasearch sector</a></li>
-                     <li><a href="service.html"><i class="fas fa-arrow-right"></i> Finance Sector</a></li>
+                     <li><a href="service.html"><i class="fas fa-arrow-right"></i> Universitas Terbuka</a></li>
+                     <li><a href="service.html"><i class="fas fa-arrow-right"></i> LMS UT</a></li>
+                     <li><a href="service.html"><i class="fas fa-arrow-right"></i> Tutorial Online </a></li>
+                     <li><a href="service.html"><i class="fas fa-arrow-right"></i> Unggah Tugas</a></li>
+                     <li><a href="service.html"><i class="fas fa-arrow-right"></i> Unggah Tugas Praktek</a></li>
+                     <li><a href="service.html"><i class="fas fa-arrow-right"></i> PDDikti</a></li>
                   </ul>
                </div>
             </div>
             <div class="custom-sm:w-1/2 custom-md:w-1/4 ">
-               <div class="widget widget-recent-post wow animate__animated animate__fadeInUp" data-wow-duration="0.8s"
-                  data-wow-delay="0.9s">
-                  <h4 class="widget-title">Recent Blog</h4>
-                  <ul>
-                     <li>
-                        <div class="media">
-                           <div class="media-left">
-                              <img src="{{ asset('assets/landing/images/widget/1.png') }}" alt="blog">
-                           </div>
-                           <div class="media-body self-center">
-                              <div class="post-info mb-[8px]"><i class="far fa-calendar-alt"></i><span>january 11,
-                                    2023</span></div>
-                              <h6 class="title mb-0"><a href="blog-details.html">Social Media For Promote Business.</a>
-                              </h6>
-                           </div>
+               <div class="widget widget_nav_menu wow animate__animated animate__fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.6s">
+                  <h4 class="widget-title">Lokasi Kami</h4>
+                     <div class="mapouter mt-4">
+                        <div class="gmap_canvas">
+                           <iframe 
+                              class="w-full h-64 rounded-lg"
+                              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d63756.17177914623!2d100.5517326!3d2.1462254!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x302e18b17b246a67%3A0x3039d80b220c5c0!2s5R52%2BR7%20Bagan%20Barat%2C%20Rokan%20Hilir%20Regency%2C%20Riau!5e0!3m2!1sid!2sid!4v1695556000000!5m2!1sid!2sid" 
+                              width="100%" 
+                              height="250" 
+                              style="border:0;" 
+                              allowfullscreen="" 
+                              loading="lazy" 
+                              referrerpolicy="no-referrer-when-downgrade">
+                           </iframe>
                         </div>
-                     </li>
-                     <li>
-                        <div class="media">
-                           <div class="media-left">
-                              <img src="{{ asset('assets/landing/images/widget/2.png') }}" alt="blog">
-                           </div>
-                           <div class="media-body self-center">
-                              <div class="post-info mb-[8px]"><i class="far fa-calendar-alt"></i><span>january 11,
-                                    2023</span></div>
-                              <h6 class="title mb-0">
-                                 <a href="blog-details.html">Marketing For Base market watch</a>
-                              </h6>
-                           </div>
-                        </div>
-                     </li>
-                  </ul>
+                     </div>
+                  </div>
                </div>
             </div>
          </div>
@@ -1113,12 +986,7 @@
          <div class="container">
             <div class="row">
                <div class="custom-sm:w-1/2 self-center">
-                  <p>© AgileTech 2025 | All Rights Reserved</p>
-               </div>
-               <div class="custom-sm:w-1/2    custom-md:!text-end">
-                  <a href="index.html">Terms & Condition</a>
-                  <a href="index.html">Privacy Policy</a>
-                  <a href="index.html">Contact Us</a>
+                  <p>© Hardi Ananda 2025 | All Rights Reserved</p>
                </div>
             </div>
          </div>
