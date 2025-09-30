@@ -57,7 +57,7 @@
       $(".single-select").niceSelect();
     }
 
-    $("select").niceSelect();
+    // $("select").niceSelect();
 
     /*--------------------------------------------
             Search Popup
