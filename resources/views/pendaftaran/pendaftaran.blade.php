@@ -158,6 +158,19 @@
                     </div>
                     <div class="custom-lg:w-3/12 custom-sm:w-1/2">
                         <div class="single-input-inner">
+                            <p>Program Studi</p>
+                            <select>
+                                <option value="">-- Pilih Program Studi --</option>
+                                <option value="Islam">S1 - Sistem Informasi</option>
+                                <option value="Kristen">S1 - Manajemen Informatika</option>
+                            </select>
+                            <span class="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2">
+                              ▼
+                           </span>
+                        </div>
+                    </div>
+                    <div class="custom-lg:w-3/12 custom-sm:w-1/2">
+                        <div class="single-input-inner">
                             <p>Kategori Mahasiswa</p>
                             <select>
                                 <option value="">-- Pilih Kategori Mahasiswa --</option>

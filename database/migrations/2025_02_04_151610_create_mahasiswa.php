@@ -26,11 +26,20 @@ return new class extends Migration
             $table->boolean('status')->default(1); // aktif/non-aktif
             $table->year('tahun_wisuda')->nullable();
             $table->string('status_pekerjaan', 100)->nullable();
-            
+
+            // 🔹 tambahan kolom baru
+            $table->enum('jenis_kelamin', ['L', 'P'])->nullable(); 
+            $table->enum('status_pernikahan', ['Belum Menikah', 'Menikah', 'Duda/Janda'])->nullable();
+            $table->string('sumber_informasi_ut', 255)->nullable();
+            $table->string('layanan_program', 255)->nullable();
+            $table->string('jalur_program', 255)->nullable();
+            $table->text('alamat')->nullable();
+
             $table->string('kode_jurusan', 10); // FK
             $table->string('id_agama'); // FK
             $table->string('id_pendidikan'); // FK
             $table->timestamps();
+
             // Foreign keys
             $table->foreign('kode_jurusan')->references('kode_jurusan')->on('jurusan')->onDelete('cascade');
             $table->foreign('id_agama')->references('id_agama')->on('agama')->onDelete('cascade');

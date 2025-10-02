@@ -161,7 +161,7 @@
                         <h2 class="accordion-header" id="headingFive">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                 data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                                Apa Itu Non SIPAS?
+                                Apa Itu Non RPL?
                             </button>
                         </h2>
                         <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
@@ -172,23 +172,19 @@
                                     RPL (Rekognisi Pembelajaran Lampau) adalah jalur kuliah di UT yang mengakui
                                     kuliah/pengalaman kerja sebelumnya untuk mempercepat masa studi.
                                 </p>
-
                                 <p><strong>Untuk siapa?</strong></p>
                                 <ul class="list-disc list-inside">
                                     <li>Lulusan D2/D3 lanjut S1</li>
                                     <li>Pindahan dari kampus lain</li>
                                     <li>Linierisasi / Konversi S1</li>
                                 </ul>
-
                                 <p><strong>Lama Kuliah:</strong> 3–5 semester (tergantung asesmen UT)</p>
-
                                 <p><strong>Biaya:</strong></p>
                                 <ul class="list-disc list-inside">
                                     <li>FEB, FHISIP, FST: Rp36.000 – Rp85.000/SKS</li>
                                     <li>FKIP: Rp45.000 – Rp83.000/SKS</li>
                                     <li>20–24 SKS ≈ Rp1,8 – 2,6 juta/semester</li>
                                 </ul>
-
                                 <p><strong>Langkah:</strong> Daftar RPL → Unggah dokumen → Asesmen UT → Hasil di LKAM.
                                 </p>
                             </div>
@@ -211,10 +207,10 @@
                             </li>
                             <li>
                                 <i class="far fa-check-circle"></i>
-                                Pas foto ukuran 4x6 wajib hasil studio (tidak boleh editan, tidak boleh foto kamera HP).
+                                Pas foto ukuran 4x6, bukan hasil foto dari foto lagi, dan ukuran file tidak lebih dari 1MB.
                                 <ul class="mt-2 ms-6 list-disc space-y-1">
                                     <li>Background sesuai tahun kelahiran: genap = biru, ganjil = merah.</li>
-                                    <li>Perempuan: wajib jilbab/baju polos (tidak boleh kaos).</li>
+                                    <li>Perempuan: jilbab tidak sewarna dengan background serta memakai baju polos (tidak boleh kaos).</li>
                                     <li>Laki-laki: wajib dasi panjang.</li>
                                 </ul>
                             </li>
