@@ -16,29 +16,53 @@
                 <h2 class="title">Tanggal Penerimaan Mahasiswa Baru</h2>
             </div>
             <div class="row">
+                {{-- Bagian RPL --}}
                 <div class="custom-lg:w-3/8 custom-sm:w-1/2">
                     <div class="single-work-process-inner wow animated fadeInUp" data-wow-duration="0.8s">
-                        <div class="thumb mb-[16px]">
-                            <img src="./images/icon/9.svg" alt="img">
+                        <div class="thumb mb-[12px]">
+                            <img src="{{ asset('assets/landing/images/TanggalRPL.png') }}" alt="img">
                         </div>
                         <div class="details">
                             <p class="process-count">Tanggal RPL</p>
-                            <h5 class="!mb-[16px]">Mulai 1 September 2025 - 30 September 2025</h5>
-                            <p class="content">Pendaftaran Jalur RPL/Alih Kredit (Melanjutkan, Pindah Kuliah Ke UT,
-                                Linierisasi) Priode Penerimaan MABA 2025.2</p>
+                            <h5 class="!mb-[16px]">
+                                @if ($data->tanggal_rpl && $data->tanggal_rpl_tutup)
+                                    Mulai {{ \Carbon\Carbon::parse($data->tanggal_rpl)->translatedFormat('d F Y') }}
+                                    - {{ \Carbon\Carbon::parse($data->tanggal_rpl_tutup)->translatedFormat('d F Y') }}
+                                @elseif($data->tanggal_rpl)
+                                    Mulai {{ \Carbon\Carbon::parse($data->tanggal_rpl)->translatedFormat('d F Y') }}
+                                @else
+                                    Belum Ditentukan
+                                @endif
+                            </h5>
+                            <p class="content">
+                                {{ $data->keterangan_rpl ?? 'Belum ada informasi.' }}
+                            </p>
                         </div>
                     </div>
                 </div>
+
+                {{-- Bagian Non RPL --}}
                 <div class="custom-lg:w-3/8 custom-sm:w-1/2">
                     <div class="single-work-process-inner wow animated fadeInUp" data-wow-duration="0.8s">
                         <div class="thumb mb-[16px]">
-                            <img src="./images/icon/10.svg" alt="img">
+                            <img src="{{ asset('assets/landing/images/TanggalNonRPL.png') }}" alt="img">
                         </div>
                         <div class="details">
                             <p class="process-count">Tanggal Non RPL</p>
-                            <h5 class="!mb-[16px]">Ditutup</h5>
-                            <p class="content">Pendaftaran Jalur Non RPL (SMA/SMK/MA/PAKET-C/SMA-TERBUKA/MUADALAH-Setara
-                                MA/SLTA Sederajat) Priode Penerimaan MABA 2025.2 Mulai 1 September 2025</p>
+                            <h5 class="!mb-[16px]">
+                                @if ($data->tanggal_non_rpl && $data->tanggal_non_rpl_tutup)
+                                    Mulai {{ \Carbon\Carbon::parse($data->tanggal_non_rpl)->translatedFormat('d F Y') }}
+                                    -
+                                    {{ \Carbon\Carbon::parse($data->tanggal_non_rpl_tutup)->translatedFormat('d F Y') }}
+                                @elseif($data->tanggal_non_rpl)
+                                    Mulai {{ \Carbon\Carbon::parse($data->tanggal_non_rpl)->translatedFormat('d F Y') }}
+                                @else
+                                    Belum Ditentukan
+                                @endif
+                            </h5>
+                            <p class="content">
+                                {{ $data->keterangan_non_rpl ?? 'Belum ada informasi.' }}
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -207,10 +231,12 @@
                             </li>
                             <li>
                                 <i class="far fa-check-circle"></i>
-                                Pas foto ukuran 4x6, bukan hasil foto dari foto lagi, dan ukuran file tidak lebih dari 1MB.
+                                Pas foto ukuran 4x6, bukan hasil foto dari foto lagi, dan ukuran file tidak lebih dari
+                                1MB.
                                 <ul class="mt-2 ms-6 list-disc space-y-1">
                                     <li>Background sesuai tahun kelahiran: genap = biru, ganjil = merah.</li>
-                                    <li>Perempuan: jilbab tidak sewarna dengan background serta memakai baju polos (tidak boleh kaos).</li>
+                                    <li>Perempuan: jilbab tidak sewarna dengan background serta memakai baju polos
+                                        (tidak boleh kaos).</li>
                                     <li>Laki-laki: wajib dasi panjang.</li>
                                 </ul>
                             </li>
@@ -236,18 +262,22 @@
                     </div>
                 </div>
                 <div class="td-sidebar service-sidebar pd-top-60">
-                  <div class="widget widget_download">
-                     <h5 class="widget-title"><i class="fas fa-arrow-right"></i>Unduh Formulir Pendaftaran Mahasiswa Baru</h5>
-                     <ul>
-                        <li><a href="index.html"> Formulir Data Pribadi Mahasiswa UT <i class="fa fa-angle-double-right"></i></a></li>
-                        <li><a href="index.html"> Formulir Tanda Tangan <i class="fa fa-angle-double-right"></i></a></li>
-                        <li><a href="index.html"> Surat Pernyataan Kebenaran dan Keabsahan <i class="fa fa-angle-double-right"></i></a></li>
-                        <li><a href="index.html"> Formulir Penilaian Kinerja Profesional Guru <i class="fa fa-angle-double-right"></i></a></li>
-                        <li><a href="index.html"> Surat Permohonan Perbaikan Data <i class="fa fa-angle-double-right"></i></a></li>
-                        <li><a href="index.html"> Lampiran Surat Permohonan Pengunduran Diri <i class="fa fa-angle-double-right"></i></a></li>
-                     </ul>
-                  </div>
-               </div>
+                    <div class="widget widget_download">
+                        <h5 class="widget-title">
+                            <i class="fas fa-arrow-right"></i> Unduh Formulir Pendaftaran Mahasiswa Baru
+                        </h5>
+                        <ul>
+                            @foreach ($berkasList as $berkas)
+                                <li>
+                                        <a href="{{ route('down', $berkas->id_berkas) }}">
+                                        {{ $berkas->nama_berkas }}
+                                        <i class="fa fa-angle-double-right"></i>
+                                    </a>
+                                </li>
+                            @endforeach
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

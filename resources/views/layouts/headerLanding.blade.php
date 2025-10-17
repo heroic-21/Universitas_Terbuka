@@ -46,52 +46,40 @@
                   <a href="{{ route('beranda.utama') }}">Beranda</a>
                </li>
                <li class="menu-item-has-children">
-                  <a href="index.html">Akademik</a>
-                  <ul class="sub-menu">
-                     <li><a href="universitas-terbuka.html">Universitas Terbuka</a></li>
-                     <li><a href="akreditasi.html">Akreditasi</a></li>
-                     <li><a href="program-studi.html">Program Studi</a></li>
-                     <li><a href="kegiatan-ut-bagansiapiapi.html">Kegiatan UT Bagansiapiapi</a></li>
-                     <li><a href="kalender-akademik.html">Kalender Akademik</a></li>
-                     <li><a href="cek-nilai.html">Cek Nilai</a></li>
-                     <li><a href="katalog-digital.html">Katalog Digital</a></li>
-                     <li><a href="surat-keterangan.html">Surat Keterangan</a></li>
-                     <li><a href="seminar-wisuda.html">Seminar dan Wisuda</a></li>
-                     <li><a href="ormawa.html">Ormawa</a></li>
-                  </ul>
-               </li>
-               <li class="menu-item-has-children">
                   <a href="index.html">Pendaftaran</a>
                   <ul class="sub-menu">
                     <li><a href="{{ route('informasi.pendaftaran') }}">Informasi Pendaftaran</a></li>
-                    <li><a href="{{ route('biaya.pendidikan') }}">Biaya Pendidikan</a></li>
+                    <li><a href="{{ route('biaya.pendidikan') }}">Program Studi</a></li>
                     <li><a href="{{ route('pendaftaran') }}">Pendaftaran</a></li>
-                    <li><a href="{{ route('brosur') }}">Brosur</a></li>
+                    <li><a href="{{ route('brosur.indexPublic') }}">Brosur</a></li>
                   </ul>
                </li>
                <li class="menu-item-has-children">
                   <a href="index.html">Layanan UT</a>
                   <ul class="sub-menu">
-                     <li><a href="website-ut.html">Website UT</a></li>
-                     <li><a href="myut.html">MyUT</a></li>
-                     <li><a href="elearning.html">E-Learning</a></li>
-                     <li><a href="lms-ut.html">LMS UT</a></li>
-                     <li><a href="tutorial-online.html">Tutorial Online Pembelajaran</a></li>
-                     <li><a href="unggah-tugas.html">Unggah Tugas</a></li>
-                     <li><a href="unggah-tugas-praktek.html">Unggah Tugas Praktek</a></li>
-                     <li><a href="pddikti.html">PDDikti</a></li>
+                     <li><a href="https://ut.ac.id">Universitas Terbuka</a></li>
+                     <li><a href="https://myut.ut.ac.id/">MyUT</a></li>
+                     <li><a href="https://elearning.ut.ac.id/">E-Learning</a></li>
+                     <li><a href="https://silayar.ut.ac.id/login/index.php">LMS UT</a></li>
+                     <li><a href="https://elearning.ut.ac.id/mod/forum/discuss.php?d=49">Tutorial Online Pembelajaran</a></li>
+                     <li><a href="https://tmk.ut.ac.id/tmkui/#/">Unggah Tugas</a></li>
+                     <li><a href="https://praktik.ut.ac.id/custom_login">Unggah Tugas Praktek</a></li>
+                     <li><a href="https://pddikti.kemdiktisaintek.go.id/">PDDikti</a></li>
+                     <li><a href="https://kpm.ut.ac.id/en/akreditasi-prodi">Akreditasi</a></li>
+                     <li><a href="https://www.ut.ac.id/kalender-akademik/">Kalender Akademik</a></li>
+                     <li><a href="https://www.ut.ac.id/katalog/">Katalog Digital</a></li>
                   </ul>
                </li>
-               <li class="underline">
+               {{-- <li class="underline">
                   <a href="{{ route('informasi') }}">Informasi</a>
-               </li>
+               </li> --}}
                <li class="underline">
                   <a href="{{ route('tentang-kami') }}">Tentang Kami</a>
                </li>
             </ul>
          </div>
          <div class="nav-right-part nav-right-part-desktop custom-md:inline-flex items-center">
-            <a class="navbar-phone custom-lg:!inline-block !hidden" href="tel:123-456789">
+            <a class="navbar-phone custom-lg:!inline-block !hidden" href="https://wa.me/085246220297">
                <span class="icon">
                   <img src="{{ asset('assets/landing/images/icon/1.png') }}" alt="img">
                </span>

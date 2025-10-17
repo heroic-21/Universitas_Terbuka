@@ -13,6 +13,7 @@ return new class extends Migration
             $table->string('fakultas', 255); // nama fakultas
             $table->text('keterangan_fakultas')->nullable(); // bisa null
             $table->string('link_fakultas_ut', 255)->nullable(); // link opsional
+            $table->string('alias', 10)->nullable(); // link opsional
             $table->timestamps();
         });
     }

@@ -58,9 +58,45 @@
                         </a>
                     </li>
                     <li class="nav-item relative block">
-                        <a href="{{ route('jurusan.index') }}"
+                        <a href="{{ route('fakultas.index') }}"
                             class="nav-link hover:bg-gray-50 hover:text-primary-500 dark:hover:bg-gray-800/20 rounded-md dark:hover:text-primary-500 relative font-medium text-sm flex items-center h-[38px] decoration-0 px-2 py-4">
-                            Jurusan
+                            Fakultas
+                        </a>
+                    </li>
+                    <li class="nav-item relative block">
+                        <a href="{{ route('prodi.index') }}"
+                            class="nav-link hover:bg-gray-50 hover:text-primary-500 dark:hover:bg-gray-800/20 rounded-md dark:hover:text-primary-500 relative font-medium text-sm flex items-center h-[38px] decoration-0 px-2 py-4">
+                            Program Studi
+                        </a>
+                    </li>
+                    <li class="nav-item relative block">
+                        <a href="{{ route('alumni.editMultiple') }}"
+                            class="nav-link hover:bg-gray-50 hover:text-primary-500 dark:hover:bg-gray-800/20 rounded-md dark:hover:text-primary-500 relative font-medium text-sm flex items-center h-[38px] decoration-0 px-2 py-4">
+                            Alumni UT
+                        </a>
+                    </li>
+                    <li class="nav-item relative block">
+                        <a href="{{ route('informasi.pendaftaran.view') }}"
+                            class="nav-link hover:bg-gray-50 hover:text-primary-500 dark:hover:bg-gray-800/20 rounded-md dark:hover:text-primary-500 relative font-medium text-sm flex items-center h-[38px] decoration-0 px-2 py-4">
+                            Informasi Pendaftaran
+                        </a>
+                    </li>
+                    <li class="nav-item relative block">
+                        <a href="{{ route('brosur.indexAdmin') }}"
+                            class="nav-link hover:bg-gray-50 hover:text-primary-500 dark:hover:bg-gray-800/20 rounded-md dark:hover:text-primary-500 relative font-medium text-sm flex items-center h-[38px] decoration-0 px-2 py-4">
+                            Brosur
+                        </a>
+                    </li>
+                    {{-- <li class="nav-item relative block">
+                        <a href="{{ route('prodi.index') }}"
+                            class="nav-link hover:bg-gray-50 hover:text-primary-500 dark:hover:bg-gray-800/20 rounded-md dark:hover:text-primary-500 relative font-medium text-sm flex items-center h-[38px] decoration-0 px-2 py-4">
+                            Blog
+                        </a>
+                    </li> --}}
+                    <li class="nav-item relative block">
+                        <a href="{{ route('tentangkami-admin.edit') }}"
+                            class="nav-link hover:bg-gray-50 hover:text-primary-500 dark:hover:bg-gray-800/20 rounded-md dark:hover:text-primary-500 relative font-medium text-sm flex items-center h-[38px] decoration-0 px-2 py-4">
+                            Tentang Kami
                         </a>
                     </li>
                 </ul>

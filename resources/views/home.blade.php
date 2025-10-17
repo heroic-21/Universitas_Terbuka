@@ -394,7 +394,8 @@
                         <div class="thumb">
                             <img src="{{ asset('assets/landing/images/LogoFAKULTAS.png') }}" alt="img">
                         </div>
-                        <h2 class="text-white mt-[24px] mb-[8px]"><span class="counter">4</span></h2>
+                        <h2 class="text-white mt-[24px] mb-[8px]"><span class="counter">{{ $totalFakultas }}</span>
+                        </h2>
                         <p class="text-white">Fakultas Tersedia</p>
                     </div>
                 </div>
@@ -404,7 +405,8 @@
                         <div class="thumb">
                             <img src="{{ asset('assets/landing/images/LogoPRODI.png') }}" alt="img">
                         </div>
-                        <h2 class="text-white mt-[24px] mb-[8px]"><span class="counter">38</span></h2>
+                        <h2 class="text-white mt-[24px] mb-[8px]"><span class="counter">{{ $totalProdi }}</span>
+                        </h2>
                         <p class="text-white">Program Studi Tersedia</p>
                     </div>
                 </div>
@@ -414,7 +416,8 @@
                         <div class="thumb">
                             <img src="{{ asset('assets/landing/images/LogoMHS.png') }}" alt="img">
                         </div>
-                        <h2 class="text-white mt-[24px] mb-[8px]"><span class="counter">2.4</span>k+</h2>
+                        <h2 class="text-white mt-[24px] mb-[8px]"><span
+                                class="counter">{{ $totalMahasiswaAktif }}</span></h2>
                         <p class="text-white">Mahasiswa Aktif</p>
                     </div>
                 </div>
@@ -424,7 +427,8 @@
                         <div class="thumb">
                             <img src="{{ asset('assets/landing/images/LogoPENDAFTAR.png') }}" alt="img">
                         </div>
-                        <h2 class="text-white mt-[24px] mb-[8px]"><span class="counter">5</span>k+</h2>
+                        <h2 class="text-white mt-[24px] mb-[8px]"><span
+                                class="counter">{{ $totalPendaftarUT }}</span></h2>
                         <p class="text-white">Pendaftar UT</p>
                     </div>
                 </div>
@@ -676,7 +680,10 @@
                                     /SKS (NON SIPAS, tergantung prodi)
                                 </li>
                                 <li><i class="fa fa-check"></i>Kurikulum Sesuai Kebutuhan Industri</li>
-                                <li><i class="fa fa-check"></i>Skripsi Khusus untuk Prodi Tertentu sesuai dengan<a href="https://www.ut.ac.id/kurikulum-baru/" class="hover:text-white hover:underline underline">Kurikulum Terbaru UT</a></li>
+                                <li><i class="fa fa-check"></i>Skripsi Khusus untuk Prodi Tertentu sesuai dengan<a
+                                        href="https://www.ut.ac.id/kurikulum-baru/"
+                                        class="hover:text-white hover:underline underline">Kurikulum Terbaru UT</a>
+                                </li>
                             </ul>
                         </div>
                     </div>
@@ -736,83 +743,28 @@
                 <h2 class="title">Apa Kata <span>Alumni</span> Universitas Terbuka</h2>
             </div>
             <div class="row bs-t">
-                <div class="custom-sm:w-1/2 custom-md:w-1/4  custom-lg:w-3/12">
-                    <div class="single-team-inner text-center wow animate__animated animate__fadeInUp"
-                        data-wow-duration="0.8s">
-                        <div class="thumb">
-                            <img src="{{ asset('assets/landing/images/IMGALUMNI1.png') }}" alt="img">
-                            <p class="team-social-inner">Sistem Informasi</p>
-                        </div>
-                        <div class="details">
-                            <h5><a href="#">Linda Amalia Sari</a></h5>
-                            <p>Menteri Pemberdayaan Perempuan dan Perlindungan Anak</p>
-                            <blockquote class="italic text-gray-600 mt-2">
-                                "Universitas Terbuka memberi saya kesempatan untuk terus menimba ilmu di tengah
-                                kesibukan.
-                                Fleksibilitas sistem belajarnya membuat pendidikan tetap bisa saya jalani"
-                            </blockquote>
-                        </div>
-                    </div>
-                </div>
-                <div class="custom-sm:w-1/2 custom-md:w-1/4  custom-lg:w-3/12">
-                    <div class="single-team-inner text-center wow animate__animated animate__fadeInUp"
-                        data-wow-duration="0.8s" data-wow-delay="0.3s">
-                        <div class="thumb">
-                            <img src="{{ asset('assets/landing/images/team/12.png') }}" alt="img">
-                            <ul class="team-social-inner">
-                                <li><a href="index.html"><i class="fab fa-facebook-f"></i></a></li>
-                                <li><a href="index.html"><i class="fab fa-twitter"></i></a></li>
-                                <li><a href="index.html"><i class="fab fa-youtube"></i></a></li>
-                                <li><a href="index.html"><i class="fab fa-instagram"></i></a></li>
-                            </ul>
-                        </div>
-                        <div class="details">
-                            <h5><a href="team-details.html">Darrell Steward</a></h5>
-                            <p>It Department</p>
+                @foreach ($alumni as $index => $a)
+                    <div class="custom-sm:w-1/2 custom-md:w-1/4 custom-lg:w-3/12">
+                        <div class="single-team-inner text-center wow animate__animated animate__fadeInUp"
+                            data-wow-duration="0.8s" data-wow-delay="{{ $index * 0.3 }}s">
+                            <div class="thumb">
+                                <img src="{{ asset('storage/' . $a->gambar) }}" alt="{{ $a->nama }}">
+                            </div>
+                            <div class="details">
+                                <h5><a href="#">{{ $a->nama }}</a></h5>
+                                <p>{{ $a->jabatan }}</p>
+                                @if ($a->kesan)
+                                    <blockquote class="italic text-gray-600 mt-2">{{ $a->kesan }}</blockquote>
+                                @endif
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="custom-sm:w-1/2 custom-md:w-1/4  custom-lg:w-3/12">
-                    <div class="single-team-inner text-center wow animate__animated animate__fadeInUp"
-                        data-wow-duration="0.8s" data-wow-delay="0.6s">
-                        <div class="thumb">
-                            <img src="{{ asset('assets/landing/images/team/13.png') }}" alt="img">
-                            <ul class="team-social-inner">
-                                <li><a href="index.html"><i class="fab fa-facebook-f"></i></a></li>
-                                <li><a href="index.html"><i class="fab fa-twitter"></i></a></li>
-                                <li><a href="index.html"><i class="fab fa-youtube"></i></a></li>
-                                <li><a href="index.html"><i class="fab fa-instagram"></i></a></li>
-                            </ul>
-                        </div>
-                        <div class="details">
-                            <h5><a href="team-details.html">Bessie Cooper</a></h5>
-                            <p>Software Department</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="custom-sm:w-1/2 custom-md:w-1/4  custom-lg:w-3/12">
-                    <div class="single-team-inner text-center wow animate__animated animate__fadeInUp"
-                        data-wow-duration="0.8s" data-wow-delay="0.9s">
-                        <div class="thumb">
-                            <img src="{{ asset('assets/landing/images/team/14.png') }}" alt="img">
-                            <ul class="team-social-inner">
-                                <li><a href="index.html"><i class="fab fa-facebook-f"></i></a></li>
-                                <li><a href="index.html"><i class="fab fa-twitter"></i></a></li>
-                                <li><a href="index.html"><i class="fab fa-youtube"></i></a></li>
-                                <li><a href="index.html"><i class="fab fa-instagram"></i></a></li>
-                            </ul>
-                        </div>
-                        <div class="details">
-                            <h5><a href="team-details.html">Bessie Cooper</a></h5>
-                            <p>Software Department</p>
-                        </div>
-                    </div>
-                </div>
+                @endforeach
             </div>
         </div>
     </div>
     <!-- team area end -->
-    <!-- blog-area start -->
+    {{-- <!-- blog-area start -->
     <div class="blog-area pd-top-100">
         <div class="container">
             <div class="section-title wow animate__animated animate__fadeInUp" data-wow-duration="0.8s">
@@ -881,7 +833,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> --}}
     <!-- blog-area end -->
     @include('layouts.footerLanding')
 

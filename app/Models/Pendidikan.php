@@ -16,6 +16,7 @@ class Pendidikan extends Model
     public $incrementing = false;
 
     protected $keyType = 'string'; // Jika primary key berupa string
+    
     protected $fillable = [
         'id_pendidikan',
         'program_pendidikan',

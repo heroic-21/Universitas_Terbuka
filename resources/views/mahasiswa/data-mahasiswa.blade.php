@@ -73,10 +73,7 @@
                                                             Nomor HP
                                                         </th>
                                                         <th scope="col" class="p-3 text-xs font-medium tracking-wider text-left text-gray-700 dark:text-gray-400 uppercase">
-                                                            Pendidikan
-                                                        </th>
-                                                        <th scope="col" class="p-3 text-xs font-medium tracking-wider text-left text-gray-700 dark:text-gray-400 uppercase">
-                                                            Jurusan
+                                                            Prodi
                                                         </th>
                                                         <th scope="col" class="p-3 text-xs font-medium tracking-wider text-left text-gray-700 dark:text-gray-400 uppercase">
                                                             Status
@@ -102,10 +99,7 @@
                                                             {{ $data_mahasiswa->nomor_hp }}
                                                         </td>
                                                         <td class="p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400">
-                                                            {{ $data_mahasiswa->pendidikan->program_pendidikan }}
-                                                        </td>
-                                                        <td class="p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400">
-                                                            {{ $data_mahasiswa->jurusan->jurusan }}
+                                                            {{ $data_mahasiswa->program_studi->program_studi }}
                                                         </td>
                                                         <td class="p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400">
                                                             @if($data_mahasiswa->keterangan == 'Aktif')

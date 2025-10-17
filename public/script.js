@@ -70,10 +70,113 @@ document.addEventListener("DOMContentLoaded", function () {
 //     $(this).closest('.jurusan-item').remove();
 // });
 
-// Untuk tambah jurusan
 $('.addJur').on('click', function () {
-    addFormGroup('jurusan');
+    addJurusanGroup();
 });
+
+function addJurusanGroup() {
+    // Buat opsi pendidikan
+    let pendidikanOptions = `<option value="">-- Pilih Pendidikan --</option>`;
+    pendidikanData.forEach(p => {
+        pendidikanOptions += `<option value="${p.id}">${p.program_pendidikan}</option>`;
+    });
+
+    // Buat opsi fakultas
+    let fakultasOptions = `<option value="">-- Pilih Fakultas --</option>`;
+    fakultasData.forEach(f => {
+        fakultasOptions += `<option value="${f.id}">${f.fakultas}</option>`;
+    });
+
+    const formGroup = `
+        <div class="jurusan-item grid md:grid-cols-12 lg:grid-cols-12 xl:grid-cols-12 gap-2 mt-2">
+
+            <!-- Kode Jurusan -->
+            <div class="md:col-span-6">
+                <label class="font-medium text-sm text-slate-600 dark:text-slate-400">Kode Jurusan</label>
+                <input type="text" name="kode_program_studi[]" placeholder="SI001"
+                    class="form-input w-full rounded-md mt-1 border border-slate-300/60 dark:border-slate-700 
+                    dark:text-slate-300 bg-transparent px-3 py-1 focus:outline-none">
+            </div>
+
+            <!-- Nama Jurusan -->
+            <div class="md:col-span-6">
+                <label class="font-medium text-sm text-slate-600 dark:text-slate-400">Nama Jurusan</label>
+                <input type="text" name="jurusan[]" placeholder="Sistem Informasi"
+                    class="form-input w-full rounded-md mt-1 border border-slate-300/60 dark:border-slate-700 
+                    dark:text-slate-300 bg-transparent px-3 py-1 focus:outline-none">
+            </div>
+
+            <!-- Keterangan -->
+            <div class="md:col-span-12">
+                <label class="font-medium text-sm text-slate-600 dark:text-slate-400">Keterangan Prodi</label>
+                <textarea name="keterangan_prodi[]" rows="3" placeholder="Tuliskan keterangan..."
+                    class="form-input w-full rounded-md mt-1 border border-slate-300/60 dark:border-slate-700 
+                    dark:text-slate-300 bg-transparent px-3 py-1 focus:outline-none"></textarea>
+            </div>
+
+            <!-- Biaya SIPAS -->
+            <div class="md:col-span-6">
+                <label class="font-medium text-sm text-slate-600 dark:text-slate-400">Biaya Pendidikan (SIPAS)</label>
+                <input type="number" step="0.01" name="biaya_pendidikan_sipas[]" placeholder="1500000"
+                    class="form-input w-full rounded-md mt-1 border border-slate-300/60 dark:border-slate-700 
+                    dark:text-slate-300 bg-transparent px-3 py-1 focus:outline-none">
+            </div>
+
+            <!-- Biaya Non SIPAS -->
+            <div class="md:col-span-6">
+                <label class="font-medium text-sm text-slate-600 dark:text-slate-400">Biaya Pendidikan (Non SIPAS)</label>
+                <input type="number" step="0.01" name="biaya_pendidikan_non_sipas[]" placeholder="2000000"
+                    class="form-input w-full rounded-md mt-1 border border-slate-300/60 dark:border-slate-700 
+                    dark:text-slate-300 bg-transparent px-3 py-1 focus:outline-none">
+            </div>
+
+            <!-- Link Prodi -->
+            <div class="md:col-span-12">
+                <label class="font-medium text-sm text-slate-600 dark:text-slate-400">Link Prodi UT</label>
+                <input type="url" name="link_prodi_ut[]" placeholder="https://www.ut.ac.id/prodi/si"
+                    class="form-input w-full rounded-md mt-1 border border-slate-300/60 dark:border-slate-700 
+                    dark:text-slate-300 bg-transparent px-3 py-1 focus:outline-none">
+            </div>
+
+            <!-- Dropdown Pendidikan -->
+            <div class="sm:col-span-6 md:col-span-4">
+                <label class="font-medium text-sm text-slate-600 dark:text-slate-400">Pendidikan</label>
+                <select name="id_pendidikan[]" 
+                    class="form-select w-full rounded-md mt-1 border border-slate-300/60 dark:border-slate-700 
+                    dark:text-slate-300 bg-transparent px-3 py-1 focus:outline-none">
+                    ${pendidikanOptions}
+                </select>
+            </div>
+
+            <!-- Dropdown Fakultas -->
+            <div class="sm:col-span-6 md:col-span-4">
+                <label class="font-medium text-sm text-slate-600 dark:text-slate-400">Fakultas</label>
+                <select name="id_fakultas[]" 
+                    class="form-select w-full rounded-md mt-1 border border-slate-300/60 dark:border-slate-700 
+                    dark:text-slate-300 bg-transparent px-3 py-1 focus:outline-none">
+                    ${fakultasOptions}
+                </select>
+            </div>
+
+            <!-- Tombol Hapus -->
+            <div class="md:col-span-4 flex items-end">
+                <button type="button"
+                    class="removeGroup w-full focus:outline-none text-red-500 hover:bg-red-500 
+                    hover:text-white border border-gray-200 dark:border-gray-700 dark:text-red-500 
+                    dark:hover:bg-red-500 dark:hover:text-white text-sm font-medium py-2 px-3 
+                    rounded flex justify-center items-center">
+                    <i class="mdi mdi-trash-can text-lg mr-1"></i> Hapus
+                </button>
+            </div>
+        </div>`;
+
+    $(".JURUSAN").before(formGroup);
+}
+
+// Untuk tambah jurusan
+// $('.addJur').on('click', function () {
+//     addFormGroup('jurusan');
+// });
 
 // Untuk tambah pendidikan
 $('.addPend').on('click', function () {
@@ -86,15 +189,6 @@ $('.addAg').on('click', function () {
 
 function addFormGroup(type) {
     const config = {
-        jurusan: {
-            prefix: 'jurusan',
-            label1: 'Kode Jurusan',
-            name1: 'kode_jurusan[]',
-            label2: 'Nama Jurusan',
-            name2: 'jurusan[]',
-            placeholder1: 'SI001',
-            placeholder2: 'Sistem Informasi',
-        },
         pendidikan: {
             prefix: 'pendidikan',
             label1: 'ID Pendidikan',

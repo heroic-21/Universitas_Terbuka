@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Mahasiswa;
-use App\Models\Jurusan;
+use App\Models\ProgramStudi;
 use App\Models\Pendidikan;
 use App\Models\Agama;
 use Illuminate\Http\Request;
@@ -29,10 +29,10 @@ class MahasiswaController extends Controller
      */
     public function create()
     {
-        $jurusan = Jurusan::all();
+        $prodi = ProgramStudi::all();
         $pendidikan = Pendidikan::all();
         $agama = Agama::all();
-        return view('mahasiswa.createMhs', compact("jurusan", "pendidikan", "agama"));
+        return view('mahasiswa.createMhs', compact("prodi", "pendidikan", "agama"));
     }
 
     /**
@@ -40,10 +40,12 @@ class MahasiswaController extends Controller
      */
     public function store(Request $request)
     {
-        // Validasi input
+        // Cek apakah ada data NIM dikirim
         if (!$request->has('nim')) {
-            return back()->withErrors(['nim' => 'Silakan Form Input Data.'])->withInput();
+            return back()->withErrors(['nim' => 'Silakan isi Form Input Data.'])->withInput();
         }
+
+        // Validasi input
         $request->validate([
             'nim.*'              => 'required|digits:9|distinct|unique:mahasiswa,nim',
             'nama_lengkap.*'     => 'required|string|max:255',
@@ -58,9 +60,12 @@ class MahasiswaController extends Controller
             'tahun_wisuda.*'     => 'required|digits:4|numeric',
             'keterangan.*'       => 'required|string',
             'status_pekerjaan.*' => 'required|string',
-            'kode_jurusan.*'     => 'required',
+            'jenis_kelamin.*'    => 'required|string',
+            'status_pernikahan.*'=> 'required|string',
+            'layanan_program.*'  => 'required|string',
+            'jalur_program.*'    => 'required|string',
+            'kode_program_studi.*' => 'required',
             'id_agama.*'         => 'required',
-            'id_pendidikan.*'    => 'required',
         ], [
             'nim.*.required'              => 'NIM wajib diisi.',
             'nim.*.unique'                => 'NIM sudah digunakan.',
@@ -94,45 +99,55 @@ class MahasiswaController extends Controller
             'tahun_wisuda.*.numeric'      => 'Tahun wisuda wajib angka.',
             'keterangan.*.required'       => 'Keterangan wajib diisi.',
             'status_pekerjaan.*.required' => 'Status pekerjaan wajib diisi.',
-            'kode_jurusan.*.required'     => 'Jurusan wajib dipilih.',
+            'jenis_kelamin.*.required'    => 'Jenis Kelamin wajib diisi.',
+            'status_pernikahan.*.required'=> 'Status Pernikahan wajib diisi.',
+            'layanan_program.*.required'  => 'Layanan Program wajib diisi.',
+            'jalur_program.*.required'    => 'Jalur Program wajib diisi.',
+            'kode_program_studi.*.required'=> 'Prodi wajib dipilih.',
             'id_agama.*.required'         => 'Agama wajib dipilih.',
-            'id_pendidikan.*.required'    => 'Pendidikan terakhir wajib dipilih.',
         ]);
+
         $data = $request->all();
 
-        $nimList = collect($request->mahasiswa)->pluck('nim');
-        $emailList = collect($request->mahasiswa)->pluck('email');
-        $nikList = collect($request->mahasiswa)->pluck('nik');
+        // Cek duplikasi manual dalam array form
+        $nimList   = collect($data['nim']);
+        $emailList = collect($data['email']);
+        $nikList   = collect($data['nomor_nik']);
 
-        $duplicateNIMs = $nimList->duplicates();
+        $duplicateNIMs   = $nimList->duplicates();
         $duplicateEmails = $emailList->duplicates();
-        $duplicateNIKs = $nikList->duplicates();
+        $duplicateNIKs   = $nikList->duplicates();
 
         if ($duplicateNIMs->isNotEmpty() || $duplicateEmails->isNotEmpty() || $duplicateNIKs->isNotEmpty()) {
             return back()->withErrors([
                 'duplicate_error' => 'Terdapat data ganda pada NIM, Email, atau NIK di formulir.',
             ])->withInput();
         }
-        // dd($data);
 
+        // dd(request->All());
+
+        // Simpan data mahasiswa
         for ($i = 0; $i < count($data['nim']); $i++) {
             Mahasiswa::create([
-                'nim' => $data['nim'][$i],
-                'nama_lengkap' => $data['nama_lengkap'][$i],
-                'tempat_lahir' => $data['tempat_lahir'][$i],
-                'tanggal_lahir' => $data['tanggal_lahir'][$i],
-                'email' => $data['email'][$i],
-                'default_password' => $data['default_password'][$i],
-                'nomor_hp' => $data['nomor_hp'][$i],
-                'nomor_nik' => $data['nomor_nik'][$i],
-                'nama_ibu_kandung' => $data['nama_ibu_kandung'][$i],
-                'tahun_masuk' => $data['tahun_masuk'][$i],
-                'tahun_wisuda' => $data['tahun_wisuda'][$i],
-                'keterangan' => $data['keterangan'][$i],
-                'status_pekerjaan' => $data['status_pekerjaan'][$i],
-                'kode_jurusan' => $data['kode_jurusan'][$i],
-                'id_agama' => $data['id_agama'][$i],
-                'id_pendidikan' => $data['id_pendidikan'][$i],
+                'nim'               => $data['nim'][$i],
+                'nama_lengkap'      => $data['nama_lengkap'][$i],
+                'tempat_lahir'      => $data['tempat_lahir'][$i],
+                'tanggal_lahir'     => $data['tanggal_lahir'][$i],
+                'email'             => $data['email'][$i],
+                'default_password'  => bcrypt($data['default_password'][$i]), // hash password
+                'nomor_hp'          => $data['nomor_hp'][$i],
+                'nomor_nik'         => $data['nomor_nik'][$i],
+                'nama_ibu_kandung'  => $data['nama_ibu_kandung'][$i],
+                'tahun_masuk'       => $data['tahun_masuk'][$i],
+                'tahun_wisuda'      => $data['tahun_wisuda'][$i],
+                'keterangan'        => $data['keterangan'][$i],
+                'status_pekerjaan'  => $data['status_pekerjaan'][$i],
+                'jenis_kelamin'     => $data['jenis_kelamin'][$i],
+                'status_pernikahan' => $data['status_pernikahan'][$i],
+                'layanan_program'   => $data['layanan_program'][$i],
+                'jalur_program'     => $data['jalur_program'][$i],
+                'kode_program_studi'=> $data['kode_program_studi'][$i],
+                'id_agama'          => $data['id_agama'][$i],
             ]);
         }
 
@@ -157,60 +172,60 @@ class MahasiswaController extends Controller
     public function edit(string $nim)
     {
         $mahasiswa = Mahasiswa::where('nim', $nim)->firstOrFail();
-        $jurusan = Jurusan::all();
-        $pendidikan = Pendidikan::all();
+        $prodi = ProgramStudi::all();
         $agama = Agama::all();
-        return view('mahasiswa.editMhs', compact('mahasiswa', 'jurusan', 'pendidikan', 'agama'));
+        return view('mahasiswa.editMhs', compact('mahasiswa', 'prodi', 'agama'));
     }
 
     /**
      * Update the specified resource in storage.
      */
+
     public function update(Request $request, string $nim)
     {
+        
         $mahasiswa = Mahasiswa::where('nim', $nim)->firstOrFail();
+
         $request->validate([
-            'nim'              => ['required', 'digits:9', 'distinct', Rule::unique('mahasiswa', 'nim')->ignore($nim, 'nim')],
+            'nim'              => ['required', 'digits:9', Rule::unique('mahasiswa', 'nim')->ignore($mahasiswa->nim, 'nim')],
             'nama_lengkap'     => 'required|string|max:255',
             'tempat_lahir'     => 'required|string',
             'tanggal_lahir'    => 'required|date',
-            'email'            => ['required', 'distinct', 'email', Rule::unique('mahasiswa', 'email')->ignore($nim, 'nim')],
+            'email'            => ['required', 'email', Rule::unique('mahasiswa', 'email')->ignore($mahasiswa->nim, 'nim')],
             'default_password' => 'required|string',
             'nomor_hp'         => 'required|numeric|digits:12',
-            'nomor_nik'        => ['required', 'digits:16', 'distinct', 'numeric', Rule::unique('mahasiswa', 'nomor_nik')->ignore($nim, 'nim')],
+            'nomor_nik'        => ['required', 'digits:16', 'numeric', Rule::unique('mahasiswa', 'nomor_nik')->ignore($mahasiswa->nim, 'nim')],
             'nama_ibu_kandung' => 'required|string',
             'tahun_masuk'      => 'required|digits:4|numeric',
             'tahun_wisuda'     => 'required|digits:4|numeric',
             'keterangan'       => 'required|string',
             'status_pekerjaan' => 'required|string',
-            'kode_jurusan'     => 'required',
+            'jenis_kelamin'    => 'required|string',
+            'status_pernikahan'=> 'required|string',
+            'layanan_program'  => 'required|string',
+            'jalur_program'    => 'required|string',
+            'kode_program_studi' => 'required',
             'id_agama'         => 'required',
-            'id_pendidikan'    => 'required',
         ], [
             'nim.required'              => 'NIM wajib diisi.',
             'nim.unique'                => 'NIM sudah digunakan.',
-            'nim.distinct'              => 'Terdapat NIM sama dalam formulir.',
-            'nim.digits'                => 'NIM harus 9 digits',
+            'nim.digits'                => 'NIM harus 9 digit.',
             'nama_lengkap.required'     => 'Nama lengkap wajib diisi.',
-            'nama_lengkap.string'       => 'Nama lengkap wajib huruf.',
             'tempat_lahir.required'     => 'Tempat lahir wajib diisi.',
             'tanggal_lahir.required'    => 'Tanggal lahir wajib diisi.',
-            'tanggal_lahir.date'        => 'Tanggal lahir harus berupa tanggal yang valid.',
+            'tanggal_lahir.date'        => 'Tanggal lahir tidak valid.',
             'email.required'            => 'Email wajib diisi.',
             'email.email'               => 'Format email tidak valid.',
             'email.unique'              => 'Email sudah digunakan.',
-            'email.distinct'            => 'Terdapat Email sama dalam formulir.',
             'default_password.required' => 'Password wajib diisi.',
-            'nomor_hp.required'         => 'Nomor handphone wajib diisi.',
-            'nomor_hp.numeric'          => 'Nomor handphone harus berupa angka.',
-            'nomor_hp.digits'           => 'Nomor handphone harus 12 digits',
+            'nomor_hp.required'         => 'Nomor HP wajib diisi.',
+            'nomor_hp.numeric'          => 'Nomor HP harus angka.',
+            'nomor_hp.digits'           => 'Nomor HP harus 12 digit.',
             'nomor_nik.required'        => 'Nomor NIK wajib diisi.',
-            'nomor_nik.numeric'         => 'Nomor NIK harus berupa angka.',
+            'nomor_nik.numeric'         => 'Nomor NIK harus angka.',
             'nomor_nik.unique'          => 'Nomor NIK sudah digunakan.',
-            'nomor_nik.distinct'        => 'Terdapat NIK sama dalam formulir.',
-            'nomor_nik.digits'          => 'Nomor NIK harus 16 digits',
+            'nomor_nik.digits'          => 'Nomor NIK harus 16 digit.',
             'nama_ibu_kandung.required' => 'Nama ibu kandung wajib diisi.',
-            'nama_ibu_kandung.string'   => 'Nama ibu kandung wajib huruf.',
             'tahun_masuk.required'      => 'Tahun masuk wajib diisi.',
             'tahun_masuk.digits'        => 'Tahun masuk harus 4 digit.',
             'tahun_masuk.numeric'       => 'Tahun masuk wajib angka.',
@@ -219,26 +234,15 @@ class MahasiswaController extends Controller
             'tahun_wisuda.numeric'      => 'Tahun wisuda wajib angka.',
             'keterangan.required'       => 'Keterangan wajib diisi.',
             'status_pekerjaan.required' => 'Status pekerjaan wajib diisi.',
-            'kode_jurusan.required'     => 'Jurusan wajib dipilih.',
+            'jenis_kelamin.required'    => 'Jenis Kelamin wajib diisi.',
+            'status_pernikahan.required'=> 'Status Pernikahan wajib diisi.',
+            'layanan_program.required'  => 'Layanan Program wajib diisi.',
+            'jalur_program.required'    => 'Jalur Program wajib diisi.',
+            'kode_program_studi.required' => 'Prodi wajib dipilih.',
             'id_agama.required'         => 'Agama wajib dipilih.',
-            'id_pendidikan.required'    => 'Pendidikan terakhir wajib dipilih.',
         ]);
-        // $data = $request->all();
 
-        $nimList = collect($request->mahasiswa)->pluck('nim');
-        $emailList = collect($request->mahasiswa)->pluck('email');
-        $nikList = collect($request->mahasiswa)->pluck('nik');
-
-        $duplicateNIMs = $nimList->duplicates();
-        $duplicateEmails = $emailList->duplicates();
-        $duplicateNIKs = $nikList->duplicates();
-
-        if ($duplicateNIMs->isNotEmpty() || $duplicateEmails->isNotEmpty() || $duplicateNIKs->isNotEmpty()) {
-            return back()->withErrors([
-                'duplicate_error' => 'Terdapat data ganda pada NIM, Email, atau NIK di formulir.',
-            ])->withInput();
-        }
-        // dd($data);
+        // dd($request->all());
 
         $mahasiswa->update([
             'nim'              => $request->nim,
@@ -246,7 +250,8 @@ class MahasiswaController extends Controller
             'tempat_lahir'     => $request->tempat_lahir,
             'tanggal_lahir'    => $request->tanggal_lahir,
             'email'            => $request->email,
-            'default_password' => $request->default_password,
+            // hash password agar konsisten dengan store
+            'default_password' => bcrypt($request->default_password),
             'nomor_hp'         => $request->nomor_hp,
             'nomor_nik'        => $request->nomor_nik,
             'nama_ibu_kandung' => $request->nama_ibu_kandung,
@@ -254,11 +259,15 @@ class MahasiswaController extends Controller
             'tahun_wisuda'     => $request->tahun_wisuda,
             'keterangan'       => $request->keterangan,
             'status_pekerjaan' => $request->status_pekerjaan,
-            'kode_jurusan'     => $request->kode_jurusan,
+            'jenis_kelamin'    => $request->jenis_kelamin,
+            'status_pernikahan'=> $request->status_pernikahan,
+            'layanan_program'  => $request->layanan_program,
+            'jalur_program'    => $request->jalur_program,
+            'kode_program_studi' => $request->kode_program_studi,
             'id_agama'         => $request->id_agama,
-            'id_pendidikan'    => $request->id_pendidikan,
         ]);
-        return redirect()->route('mahasiswa.index')->with('success', 'Data Mahasiswa berhasil disimpan!');
+
+        return redirect()->route('mahasiswa.index')->with('success', 'Data Mahasiswa berhasil diperbarui!');
     }
 
     /**
@@ -277,7 +286,7 @@ class MahasiswaController extends Controller
     public function exportCsv(): StreamedResponse
     {
         $fileName = 'Data Mahasiswa UT.xlsx';
-        $mahasiswa = Mahasiswa::with(['jurusan', 'agama', 'pendidikan'])->get();
+        $mahasiswa = Mahasiswa::with(['prodi', 'agama', 'pendidikan'])->get();
 
         $headers = [
             "Content-type"        => "xlsx",
@@ -301,7 +310,7 @@ class MahasiswaController extends Controller
             'Tahun Wisuda',
             'Keterangan',
             'Status Pekerjaan',
-            'Kode Jurusan',
+            'Kode Prodi',
             'ID Agama',
             'ID Pendidikan'
         ];
@@ -325,7 +334,7 @@ class MahasiswaController extends Controller
                     $row->tahun_wisuda,
                     $row->keterangan,
                     $row->status_pekerjaan,
-                    $row->jurusan->jurusan,
+                    $row->prodi->prodi,
                     $row->agama->agama,
                     $row->pendidikan->program_pendidikan,
                 ]);
@@ -339,7 +348,7 @@ class MahasiswaController extends Controller
 
     public function exportPdf()
     {
-        $mahasiswa = Mahasiswa::with(['jurusan', 'agama', 'pendidikan'])->get();
+        $mahasiswa = Mahasiswa::with(['prodi', 'agama', 'pendidikan'])->get();
 
         $pdf = Pdf::loadView('mahasiswa.export-pdf', compact('mahasiswa'))
           ->setPaper('a4', 'landscape');

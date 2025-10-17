@@ -32,18 +32,23 @@ class Mahasiswa extends Model
         'status',
         'tahun_wisuda',
         'status_pekerjaan',
-        'kode_jurusan',
+        'kode_program_studi',
         'id_agama',
-        'id_pendidikan'
+        'id_pendidikan',
+        'jenis_kelamin',
+        'status_pernikahan',
+        'layanan_program',
+        'sumber_informasi_ut',
+        'jalur_program',
     ];
 
-    public function jurusan(){
-        return $this->belongsTo(Jurusan::class, 'kode_jurusan', 'kode_jurusan');
+    public function program_studi(){
+        return $this->belongsTo(ProgramStudi::class, 'kode_program_studi', 'kode_program_studi');
     }
     public function agama(){
         return $this->belongsTo(Agama::class, 'id_agama', 'id_agama');
     }
-    public function pendidikan(){
-        return $this->belongsTo(Pendidikan::class, 'id_pendidikan', 'id_pendidikan');
-    }
+    // public function pendidikan(){
+    //     return $this->belongsTo(Pendidikan::class, 'id_pendidikan', 'id_pendidikan');
+    // }
 }

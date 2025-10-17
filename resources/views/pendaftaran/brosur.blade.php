@@ -20,50 +20,29 @@
                 </div>
             </div>
             <div class="row">
-                <div class="custom-md:w-1/3 custom-sm:w-1/2">
-                    <div class="single-team-inner text-center wow animated fadeInUp" data-wow-duration="0.8s">
-                        <div class="thumb">
-                            <img src="{{ asset('assets/landing/images/BROSUR1.png') }}" alt="img">
-                            <ul class="team-social-inner">
-                                <li><a href="index.html">Unduh Poster</a></li>
-                            </ul>
-                        </div>
-                        <div class="details">
-                            <h5><a href="team-details.html">Judul Poster</a></h5>
-                            <p>Kategori Poster</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="custom-md:w-1/3 custom-sm:w-1/2">
-                    <div class="single-team-inner text-center wow animated fadeInUp" data-wow-duration="0.8s"
-                        data-wow-delay="0.3s">
-                        <div class="thumb">
-                            <img src="{{ asset('assets/landing/images/BROSUR2.png') }}" alt="img">
-                            <ul class="team-social-inner">
-                                <li><a href="index.html">Unduh Poster</a></li>
-                            </ul>
-                        </div>
-                        <div class="details">
-                            <h5><a href="team-details.html">Judul Poster</a></h5>
-                            <p>Kategori Poster</p>
+                @foreach ($brosur as $index => $b)
+                    <div class="custom-md:w-1/3 custom-sm:w-1/2">
+                        <div class="single-team-inner flex flex-col h-full text-center wow animated fadeInUp"
+                            data-wow-duration="0.8s" data-wow-delay="{{ $index * 0.3 }}s">
+                            <div class="thumb flex-shrink-0">
+                                <img class="w-full h-80 object-cover rounded" src="{{ asset('storage/' . $b->brosur) }}"
+                                    alt="{{ $b->judul_brosur }}">
+                                <ul class="team-social-inner">
+                                    <li>
+                                        <a href="{{ asset('storage/' . $b->brosur) }}" 
+                                        download="{{ \Illuminate\Support\Str::slug($b->judul_brosur) }}.{{ pathinfo($b->brosur, PATHINFO_EXTENSION) }}">
+                                        Unduh Poster
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="details flex-1 mt-2">
+                                <h5><a href="#">{{ $b->judul_brosur }}</a></h5>
+                                <p>{{ $b->kategori_brosur }}</p>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="custom-md:w-1/3 custom-sm:w-1/2">
-                    <div class="single-team-inner text-center wow animated fadeInUp" data-wow-duration="0.8s"
-                        data-wow-delay="0.6s">
-                        <div class="thumb">
-                            <img src="{{ asset('assets/landing/images/BROSUR3.png') }}" alt="img">
-                            <ul class="team-social-inner">
-                                <li><a href="index.html">Unduh Poster</a></li>
-                            </ul>
-                        </div>
-                        <div class="details">
-                            <h5><a href="team-details.html">Judul Poster</a></h5>
-                            <p>Kategori Poster</p>
-                        </div>
-                    </div>
-                </div>
+                @endforeach
             </div>
         </div>
     </div>

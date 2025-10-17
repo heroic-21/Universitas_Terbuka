@@ -24,7 +24,7 @@
                                 <div class="">
                                     <div class="flex flex-wrap justify-between">
                                         <div class="items-center ">
-                                            <h1 class="font-semibold text-xl mb-1 block dark:text-slate-100">Data Jurusan Universtias Terbuka Rokan Hilir</h1>
+                                            <h1 class="font-semibold text-xl mb-1 block dark:text-slate-100">Data Prodi Universtias Terbuka Rokan Hilir</h1>
                                         </div>
                                     </div>
                                 </div>
@@ -33,14 +33,13 @@
                     </div>
                 </div><!--end container-->
                 <div class="xl:w-full  min-h-[calc(100vh-138px)] relative pb-14 ">
-
                     <div class="grid md:grid-cols-12 lg:grid-cols-12 xl:grid-cols-12 gap-4 mb-4">
                         <div class="sm:col-span-12  md:col-span-12 lg:col-span-12 xl:col-span-12 ">
                             <div class="bg-white dark:bg-slate-800 shadow  rounded-md w-full relative">
                                 <div class="flex justify-end items-center border-b border-dashed border-slate-200 dark:border-slate-700 py-3 px-4 dark:text-slate-300/70">
                                     <a href="#modalscrollable" data-modal-toggle="modal">
                                         <button class="px-3 py-2 lg:px-4 bg-blue-500 text-white text-sm font-semibold rounded hover:bg-blue-600">
-                                            Tambah Data Jurusan
+                                            Tambah Data Program Studi
                                         </button>
                                     </a>
                                 </div>
@@ -52,10 +51,16 @@
                                                 <thead class="bg-gray-50 dark:bg-gray-600/20">
                                                     <tr>
                                                         <th scope="col" class="p-3 text-xs font-medium tracking-wider text-left text-gray-700 dark:text-gray-400 uppercase">
-                                                            Kode Jurusan
+                                                            Kode Program Studi
                                                         </th>
                                                         <th scope="col" class="p-3 text-xs font-medium tracking-wider text-left text-gray-700 dark:text-gray-400 uppercase">
-                                                            Nama Jurusan
+                                                            Nama Program Studi
+                                                        </th>
+                                                        <th scope="col" class="p-3 text-xs font-medium tracking-wider text-left text-gray-700 dark:text-gray-400 uppercase">
+                                                            Pendidikan
+                                                        </th>
+                                                        <th scope="col" class="p-3 text-xs font-medium tracking-wider text-left text-gray-700 dark:text-gray-400 uppercase">
+                                                            Fakultas
                                                         </th>
                                                         <th scope="col" class="p-3 text-xs font-medium tracking-wider text-left text-gray-700 dark:text-gray-400 uppercase">
                                                             Aksi
@@ -63,23 +68,29 @@
                                                     </tr>
                                                 </thead>
                                                 <tbody>
-                                                    @foreach ($jurusans as $jurusan)
+                                                    @foreach ($prodis as $prodi)
                                                     <tr class="bg-white border-b border-dashed dark:bg-gray-800 dark:border-gray-700">
                                                         <td class="p-3 text-sm font-medium whitespace-nowrap dark:text-white">
-                                                            {{ $jurusan->kode_jurusan }}
+                                                            {{ $prodi->kode_program_studi }}
                                                         </td>
                                                         <td class="p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400">
-                                                            {{ $jurusan->jurusan }}
+                                                            {{ $prodi->program_studi }}
+                                                        </td>
+                                                        <td class="p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400">
+                                                            {{ $prodi->pendidikan->program_pendidikan }}
+                                                        </td>
+                                                        <td class="p-3 text-sm text-gray-500 whitespace-nowrap dark:text-gray-400">
+                                                            {{ $prodi->fakultas->fakultas }}
                                                         </td>
                                                         <td class="p-3 text-lg text-gray-500 whitespace-nowrap dark:text-gray-400">
                                                             <div class="flex items-center gap-2">
-                                                                <a href="{{ route('jurusan.edit', $jurusan->kode_jurusan) }}">
+                                                                <a href="{{ route('prodi.edit', $prodi->kode_program_studi) }}">
                                                                     <i class="ti ti-edit text-lg text-yellow-500 dark:text-yellow-400"></i>
                                                                 </a>
-                                                                <form id="form-delete-{{ $jurusan->kode_jurusan }}" action="{{ route('jurusan.destroy', $jurusan->kode_jurusan) }}" method="POST">
+                                                                <form id="form-delete-{{ $prodi->kode_program_studi }}" action="{{ route('prodi.destroy', $prodi->kode_program_studi) }}" method="POST">
                                                                     @csrf
                                                                     @method('DELETE')
-                                                                    <button type="button" onclick="handleDismiss('{{ $jurusan->kode_jurusan }}')">
+                                                                    <button type="button" onclick="handleDismiss('{{ $prodi->kode_program_studi }}')">
                                                                         <i class="ti ti-trash text-lg text-red-500 dark:text-red-400"></i>
                                                                     </button>
                                                                 </form>
@@ -99,7 +110,7 @@
                 </div><!--end container-->
             </div>
         </div>
-        @include('jurusan.createJrs')
+        @include('prodi.createProdi')
         {{-- @foreach ($jurusans as $data_jurusan)
             @include('jurusan.editJrs', ['data_jurusan' => $data_jurusan])
         @endforeach --}}
@@ -122,6 +133,9 @@
                     executeExample('mixin');
                 });
             @endif
+
+            const pendidikanData = @json($pendidikan);
+            const fakultasData   = @json($fakultas);
         </script>
         <script src="assets/js/app.js"></script>
         <!-- JAVASCRIPTS -->
