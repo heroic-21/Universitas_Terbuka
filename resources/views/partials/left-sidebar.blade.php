@@ -25,7 +25,7 @@
                 <a href="index.html" class="leading-[60px]">
                     <img src="{{ asset('assets/images/logo-2.png') }}" alt=""
                         class="inline-block dark:hidden h-[15px] ltr:ml-4 rtl:ml-0 rtl:mr-4">
-                    <img src="{{ asset('assets/images/logo.png') }}" alt=""
+                    <img src="{{ asset('assets/images/logo-2.png') }}" alt=""
                         class=" hidden dark:inline-block h-[15px] ltr:ml-4 rtl:ml-0 rtl:mr-4">
                 </a>
                 <div class="ltr:mr-2 ltr:lg:mr-4 rtl:mr-0 rtl:ml-2 rtl:lg:mr-0 rtl:lg:ml-4 ml-auto block xl:hidden">

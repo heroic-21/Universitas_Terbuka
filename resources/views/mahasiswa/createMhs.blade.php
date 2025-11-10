@@ -29,11 +29,11 @@
                                 <div class="items-center ">
                                     <h1 class="font-semibold text-xl mb-1 block dark:text-slate-100">Form Elements</h1>
                                     <ol class="list-reset flex text-sm">
-                                        <li><a href="#" class="text-gray-500">Tailfox</a></li>
+                                        <li><a href="#" class="text-gray-500">Beranda</a></li>
                                         <li><span class="text-gray-500 mx-2">/</span></li>
-                                        <li class="text-gray-500">Forms</li>
+                                        <li class="text-gray-500">Tambah Data</li>
                                         <li><span class="text-gray-500 mx-2">/</span></li>
-                                        <li class="text-blue-600 hover:text-blue-700">Form Elements</li>
+                                        <li class="text-blue-600 hover:text-blue-700">Mahasiswa</li>
                                     </ol>
                                 </div>
                                 <div class="flex items-center">
@@ -219,7 +219,7 @@
                                                     <label for={{ 'oldnomor_nik_' . $i }}
                                                         class="font-medium text-sm text-slate-600 dark:text-slate-400">Nomor
                                                         Induk
-                                                        Keluarga</label>
+                                                        Kependudukan</label>
                                                     <input type="text" name="nomor_nik[]"
                                                         id={{ 'oldnomor_nik_' . $i }}
                                                         value="{{ old('nomor_nik.' . $i) }}"
@@ -300,6 +300,9 @@
                                                         <option value="Tidak Aktif"
                                                             {{ old("keterangan.$i") == 'Tidak Aktif' ? 'selected' : '' }}>
                                                             Tidak Aktif</option>
+                                                        <option value="Alumni"
+                                                            {{ old("keterangan.$i") == 'Alumni' ? 'selected' : '' }}>
+                                                            Alumni</option>
                                                     </select>
                                                     @error("keterangan.$i")
                                                         <div class="invalid-feedback text-red-500 font-medium text-sm">
@@ -595,7 +598,7 @@
                                                 <label for="nomor_nik___index__"
                                                     class="font-medium text-sm text-slate-600 dark:text-slate-400">Nomor
                                                     Induk
-                                                    Keluarga</label>
+                                                    Kependudukan</label>
                                                 <input type="text" name="nomor_nik[]" id="nomor_nik___index__"
                                                     disabled
                                                     class="form-input w-full rounded-md mt-1 border border-slate-300/60 dark:border-slate-700 dark:text-slate-300 bg-transparent px-3 py-1 focus:outline-none focus:ring-0 placeholder:text-slate-400/70 placeholder:font-normal placeholder:text-sm hover:border-slate-400 focus:border-primary-500 dark:focus:border-primary-500  dark:hover:border-slate-700">
@@ -643,6 +646,7 @@
                                                     <option value="">-- Pilih Keterangan --</option>
                                                     <option value="Aktif">Aktif</option>
                                                     <option value="Tidak Aktif">Tidak Aktif</option>
+                                                    <option value="Alumni">Alumni</option>
                                                 </select>
                                             </div>
                                         </div>

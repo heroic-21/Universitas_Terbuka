@@ -13,10 +13,13 @@ use App\Http\Controllers\FakultasController;
 use App\Http\Controllers\LandingController;
 use App\Http\Controllers\Auth\GoogleController;
 use Illuminate\Support\Facades\Route;
+use App\Models\Visitor;
+use App\Http\Controllers\VisitorController;
 
 Route::get('auth/google', [GoogleController::class, 'redirectToGoogle'])->name('google.login');
 Route::get('auth/google/callback', [GoogleController::class, 'handleGoogleCallback']);
 Route::get('login', function () {return view('login');})->name('login');
+Route::post('/logout', [GoogleController::class, 'logout'])->name('logout');
 
 Route::middleware(['auth', 'admin'])->group(function () {
     Route::resource('mahasiswa', MahasiswaController::class);
@@ -40,7 +43,7 @@ Route::middleware(['auth', 'admin'])->group(function () {
     Route::post('/brosur/simpan', [BrosurController::class, 'store'])->name('brosur.store');
     Route::get('/brosur/edit/{id}', [BrosurController::class, 'edit'])->name('brosur.edit');
     Route::post('/brosur/update/{id}', [BrosurController::class, 'update'])->name('brosur.update');
-    Route::get('/brosur/hapus/{id}', [BrosurController::class, 'destroy'])->name('brosur.destroy');
+    Route::delete('/brosur/hapus/{id}', [BrosurController::class, 'destroy'])->name('brosur.destroy');
     Route::get('/brosur/admin', [BrosurController::class, 'indexAdmin'])->name('brosur.indexAdmin');
 });
 Route::get('/', [LandingController::class, 'index'])->name('beranda.utama');
@@ -53,3 +56,15 @@ Route::get('/informasi', function () {return view('informasi');})->name('informa
 Route::get('/tentang-kami', [TentangKamiController::class, 'indexPublic'])->name('tentang-kami');
 Route::get('/unduh/{id}', [DataRPLController::class, 'downloadBerkas'])->name('down');
 Route::get('/brosur/public', [BrosurController::class, 'indexPublic'])->name('brosur.indexPublic');
+
+// Route::get('/test-visitor', function () {
+//     Visitor::create([
+//         'ip' => request()->ip(),
+//         'user_agent' => request()->header('User-Agent'),
+//         'visited_at' => now(),
+//     ]);
+
+//     return 'Data visitor berhasil ditambah!';
+// });
+
+Route::get('/track-visitor', [\App\Http\Controllers\VisitorController::class, 'track']);

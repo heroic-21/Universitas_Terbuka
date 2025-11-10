@@ -673,95 +673,12 @@
                             />
                     </div>
                 </div>
+                <h1 style="color:red">TEST 123</h1>
 
                 <div class="ltr:mr-2 ltr:lg:mr-4 rtl:mr-0 rtl:ml-2 rtl:lg:mr-0 rtl:lg:ml-4">
                     <button id="toggle-theme" class="flex rounded-full md:mr-0 relative">
                         <i class="ti ti-moon text-3xl top-icon"></i>
                     </button>
-                </div>
-                <div class="ltr:mr-2 ltr:lg:mr-4 rtl:mr-0 rtl:ml-2 rtl:lg:mr-0 rtl:lg:ml-4 dropdown relative">
-                    <button
-                        type="button"
-                        class="dropdown-toggle flex rounded-full md:mr-0"
-                        id="Notifications"
-                        aria-expanded="false"
-                        data-dropdown-toggle="navNotifications">
-                        <i class="ti ti-bell text-3xl top-icon"></i>
-                    </button>
-
-                    <div
-                        class="dropdown-menu dropdown-menu-right z-50 my-1 hidden w-64
-                        list-none divide-y h-52 divide-gray-100 rounded border-slate-700
-                        md:border-white text-base shadow dark:divide-gray-600 bg-white
-                        dark:bg-slate-800"
-                        id="navNotifications" data-simplebar>
-                        <ul class="py-1" aria-labelledby="navNotifications">
-                        <li class="py-2 px-4">
-                            <a href="javascript:void(0);" class="dropdown-item">
-                            <div class="flex align-items-start">
-                                <img class="object-cover rounded-full h-8 w-8 shrink-0 mr-3"
-                                src="assets/images/users/avatar-2.jpg" alt="logo" />
-                                <div class="flex-grow ml-0.5 overflow-hidden">
-                                <p class="text-sm font-medium text-gray-800 truncate
-                                    dark:text-gray-300">Karen Robinson</p>
-                                <p class="text-gray-500 mb-0 text-xs truncate
-                                    dark:text-gray-400">
-                                    Hey ! i'm available here
-                                </p>
-                                </div>
-                            </div>
-                            </a>
-                        </li>
-                        <li class="py-2 px-4">
-                            <a href="javascript:void(0);" class="dropdown-item">
-                            <div class="flex align-items-start">
-                                <img class="object-cover rounded-full h-8 w-8 shrink-0 mr-3"
-                                src="assets/images/users/avatar-3.jpg" alt="logo" />
-                                <div class="flex-grow ml-0.5 overflow-hidden">
-                                <p class="text-sm font-medium text-gray-800 truncate
-                                    dark:text-gray-300">Your order is placed</p>
-                                <p class="text-gray-500 mb-0 text-xs truncate
-                                    dark:text-gray-400">
-                                    Dummy text of the printing and industry.
-                                </p>
-                                </div>
-                            </div>
-                            </a>
-                        </li>
-                        <li class="py-2 px-4">
-                            <a href="javascript:void(0);" class="dropdown-item">
-                            <div class="flex align-items-start">
-                                <img class="object-cover rounded-full h-8 w-8 shrink-0 mr-3"
-                                src="assets/images/users/avatar-9.jpg" alt="logo" />
-                                <div class="flex-grow ml-0.5 overflow-hidden">
-                                <p class="text-sm font-medium text-gray-800 truncate
-                                    dark:text-gray-300">Robert McCray</p>
-                                <p class="text-gray-500 mb-0 text-xs truncate
-                                    dark:text-gray-400">
-                                    Good Morning!
-                                </p>
-                                </div>
-                            </div>
-                            </a>
-                        </li>
-                        <li class="py-2 px-4">
-                            <a href="javascript:void(0);" class="dropdown-item">
-                            <div class="flex align-items-start">
-                                <img class="object-cover rounded-full h-8 w-8 shrink-0 mr-3"
-                                src="assets/images/users/avatar-6.jpg" alt="logo" />
-                                <div class="flex-grow ml-0.5 overflow-hidden">
-                                <p class="text-sm font-medium text-gray-800 truncate
-                                    dark:text-gray-300">Meeting with designers</p>
-                                <p class="text-gray-500 mb-0 text-xs truncate
-                                    dark:text-gray-400">
-                                    It is a long established fact that a reader.
-                                </p>
-                                </div>
-                            </div>
-                            </a>
-                        </li>
-                        </ul>
-                    </div>
                 </div>
                 <div class="mr-2 lg:mr-0 dropdown relative">
                     <button
@@ -777,7 +694,7 @@
                         alt="user photo"
                         />
                         <span class="ltr:ml-2 rtl:ml-0 rtl:mr-2 hidden text-left xl:block">
-                        <span class="block font-medium text-slate-600 dark:text-gray-400">Maria Gibson</span>
+                        <span class="block font-medium text-slate-600 dark:text-gray-400">UT Bagansiapiapi</span>
                         <span class="-mt-1 block text-xs text-slate-500 dark:text-gray-500">Admin</span>
                         </span>
                     </button>
@@ -787,43 +704,17 @@
                         divide-y divide-gray-100 rounded border-slate-700 md:border-white
                         text-base shadow dark:divide-gray-600 bg-white dark:bg-slate-800"
                         id="navUserdata">
-                        <div class="py-3 px-4">
-                        <span
-                            class="block text-sm font-medium text-gray-900 dark:text-white">Bonnie
-                            Green</span>
-                        <span
-                            class="block truncate text-sm font-normal text-gray-500
-                            dark:text-gray-400">name@flowbite.com</span>
-                        </div>
                         <ul class="py-1" aria-labelledby="navUserdata">
-                        <li>
-                            <a
-                            href="#"
-                            class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-50
-                            dark:text-gray-200 dark:hover:bg-gray-900/20
-                            dark:hover:text-white">Dashboard</a>
-                        </li>
-                        <li>
-                            <a
-                            href="#"
-                            class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-50
-                            dark:text-gray-200 dark:hover:bg-gray-900/20
-                            dark:hover:text-white">Settings</a>
-                        </li>
-                        <li>
-                            <a
-                            href="#"
-                            class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-50
-                            dark:text-gray-200 dark:hover:bg-gray-900/20
-                            dark:hover:text-white">Earnings</a>
-                        </li>
-                        <li>
-                            <a
-                            href="#"
-                            class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-50
-                            dark:text-gray-200 dark:hover:bg-gray-900/20
-                            dark:hover:text-white">Sign out</a>
-                        </li>
+                            <li>
+                                <form action="{{ route('logout') }}" method="POST" id="logout-form">
+                                    @csrf
+                                    <button type="submit"
+                                        class="w-full text-left block py-2 px-4 text-sm text-gray-700 hover:bg-gray-50
+                                        dark:text-gray-200 dark:hover:bg-gray-900/20 dark:hover:text-white">
+                                        Logout
+                                    </button>
+                                </form>
+                            </li>
                         </ul>
                     </div>
                 </div>

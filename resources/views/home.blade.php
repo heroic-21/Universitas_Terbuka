@@ -14,26 +14,48 @@
                         <h6 class="subtitle" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
                             Belajar di mana saja, kapan saja
                         </h6>
-                        <h2 class="title" data-aos="fade-up" data-aos-duration="800" data-aos-delay="600">
-                            SALUT UT <span class="highlight">Bagansiapiapi</span> Layanan Pendidikan Tinggi <span
-                                class="highlight">next level</span>
+                        <h2 class="title" data-aaos="fade-up" data-aos-duration="800" data-aos-delay="600">
+                            SALUT Negeri Seribu Kubah Bagansiapiapi<span class="highlight"></span>  <span
+                                class="highlight">Layanan Pendidikan Tinggi next level</span>
                         </h2>
                         <p class="content custom-lg:pe-[48px]" data-aos="fade-up" data-aos-duration="800"
                             data-aos-delay="900">
                             Pendaftaran, pengambilan modul, konsultasi akademik & administrasi jadi lebih mudah,
                             fleksibel, dan terpercaya.
                         </p>
-                        <a class="btn btn-base" data-aos="fade-up" data-aos-duration="800" data-aos-delay="600"
-                            href="about.html">
-                            Daftar UT Bagansiapiapi
-                        </a>
-                        <div class="inline-block self-center" data-aos="fade-up" data-aos-duration="800"
-                            data-aos-delay="700">
-                            <a class="video-play-btn-hover !static" href="https://www.youtube.com/embed/Wimkqo8gDZ0">
-                                <img src="{{ asset('assets/landing/images/video.svg') }}" alt="img">
-                                <h6 class="inline-block">Universitas Terbuka</h6>
+                        <div class="flex items-center gap-6 mt-4" data-aos="fade-up" data-aos-duration="800" data-aos-delay="600">
+                            <a class="btn btn-base" href="{{ route('pendaftaran') }}">
+                                Daftar UT Negeri Seribu Kubah
                             </a>
+                            <div class="flex gap-4">
+                                <a href="https://www.facebook.com/salutnegeri1000kubahbaa" target="_blank" title="Facebook"
+                                   style="width:50px; height:50px; display:flex; align-items:center; justify-content:center; background:#4267B2; color:white; border-radius:50%; font-size:1.25rem; transition: transform 0.3s;"
+                                   onmouseover="this.style.transform='scale(1.1)';" onmouseout="this.style.transform='scale(1)';">
+                                   <i class="fab fa-facebook-f"></i>
+                                </a>
+                            
+                                <a href="https://www.tiktok.com/@salut.bagansiapiapi" target="_blank" title="TikTok"
+                                   style="width:50px; height:50px; display:flex; align-items:center; justify-content:center; background:black; color:white; border-radius:50%; font-size:1.25rem; transition: transform 0.3s;"
+                                   onmouseover="this.style.transform='scale(1.1)';" onmouseout="this.style.transform='scale(1)';">
+                                   <i class="fab fa-tiktok"></i>
+                                </a>
+                                
+                                <a href="https://www.instagram.com/salutbagansiapiapi" target="_blank" title="Instagram"
+                                   style="width:50px; height:50px; display:flex; align-items:center; justify-content:center; background:linear-gradient(to top right, #facc15, #ec4899, #8b5cf6); color:white; border-radius:50%; font-size:1.25rem; transition: transform 0.3s;"
+                                   onmouseover="this.style.transform='scale(1.1)';" onmouseout="this.style.transform='scale(1)';">
+                                   <i class="fab fa-instagram"></i>
+                                </a>
+                            </div>
                         </div>
+                    </div>
+                    <div class="video-container inline-block self-center pt-8" data-aos="fade-up" data-aos-duration="800" data-aos-delay="700">
+                        <iframe 
+                            src="https://www.youtube.com/embed/QkUPjVPt3sg" 
+                            title="Universitas Terbuka"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen>
+                        </iframe>
                     </div>
                 </div>
             </div>
@@ -43,8 +65,9 @@
         <img class="animate-img-2 animate-leftImageBounce" src="{{ asset('assets/landing/images/banner/5.svg') }}"
             alt="img">
         <div class="banner-14-thumb">
-            <img src="{{ asset('assets/landing/images/MHSUT.png') }}" alt="Image">
-        </div>
+    <img src="{{ asset('assets/landing/images/MHSUT.png') }}" alt="Image"
+         class="hidden sm:block w-full">
+</div>
         <div class="banner-13-thumb-sm">
             <img src="{{ asset('assets/landing/images/home-14/banner/banner-shape.png') }}" alt="Image">
         </div>
@@ -126,10 +149,10 @@
                 </div>
                 <div class="custom-md:w-1/2" data-aos="fade-right" data-aos-duration="800" data-aos-delay="300">
                     <div class="section-title mt-[48px] mb-0 custom-md:mt-0">
-                        <h6 class="sub-title uppercase">Universitas Terbuka Bagansiapiapi</h6>
+                        <h6 class="sub-title uppercase">Universitas Terbuka Negeri Seribu Kubah</h6>
                         <h2 class="title"><span>SEMUA BISA KULIAH DI KAMPUS NEGERI.</span> #Universitas Terbuka
                         </h2>
-                        <p class="content !mb-[24px] custom-lg:!mb-[48px]">SALUT UT Bagansiapiapi hadir sebagai pusat
+                        <p class="content !mb-[24px] custom-lg:!mb-[48px]">SALUT UT Negeri Seribu Kubah hadir sebagai pusat
                             layanan resmi Universitas Terbuka, memberikan kemudahan bagi mahasiswa untuk mendapatkan
                             informasi,
                             layanan akademik, hingga pendampingan belajar tanpa harus jauh ke kota besar.</p>
@@ -170,9 +193,15 @@
                         </div>
                         <div class="about-area-of">
                             <div class="area-left">
-                                <a class="btn btn-base mt-0" href="about.html" data-aos="fade-up"
+                                <a class="btn btn-base mt-0" href="{{ route('pendaftaran') }}" data-aos="fade-up"
                                     data-aos-duration="800" data-aos-delay="600" href="about.html">Daftar UT
                                     Sekarang</a>
+                            </div>
+                            <div class="area-left">
+                                <div class="btn btn-base mt-0" data-aos="fade-up"
+                                    data-aos-duration="800" data-aos-delay="600">
+                                    Jumlah Pengunjung Website: {{ number_format($total_pengunjung) }}
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -187,8 +216,8 @@
             src="{{ asset('assets/landing/images/icon/4.png') }}" alt="img">
         <div class="container">
             <div class="section-title text-center" data-aos="fade-up" data-aos-duration="800">
-                <h6 class="sub-title">Sentral Layanan Universitas Terbuka Bagansiapiapi</h6>
-                <h2 class="title">Daftar Fakultas UT Bagansiapiapi</h2>
+                <h6 class="sub-title">Sentral Layanan Universitas Terbuka Negeri Seribu Kubah</h6>
+                <h2 class="title">Daftar Fakultas UT Negeri Seribu Kubah</h2>
             </div>
             <div class="section-title text-center" data-aos="fade-up" data-aos-duration="800">
             </div>
@@ -200,11 +229,11 @@
                             <img src="{{ asset('assets/landing/images/FKIP.png') }}" alt="img">
                         </div>
                         <div class="details">
-                            <h5><a href="service-details.html">Fakultas Keguruan dan Ilmu Pendidikan - 12 Program
+                            <h5><a>Fakultas Keguruan dan Ilmu Pendidikan - 12 Program
                                     Studi</a></h5>
                             <p>Sebuah fakultas di universitas yang berfokus pada pendidikan calon pendidik dan
                                 profesional di bidang pendidikan.</p>
-                            <a href="service-details.html">
+                            <a target="_blank" href="https://www.ut.ac.id/fkip/">
                                 Lihat Informasi
                                 <svg xmlns="http://www.w3.org/2000/svg" width="34" height="20"
                                     viewBox="0 0 34 20" fill="none">
@@ -225,11 +254,11 @@
                             <img src="{{ asset('assets/landing/images/FHSIP.png') }}" alt="img">
                         </div>
                         <div class="details">
-                            <h5><a href="service-details.html">Fakultas Hukum, Ilmu Sosial, dan Politik - 10 Program
+                            <h5><a>Fakultas Hukum, Ilmu Sosial, dan Politik - 10 Program
                                     Studi</a></h5>
                             <p>Sebuah fakultas yang berfokus pada ilmu hukum, sosial, dan politik untuk mencetak lulusan
                                 yang kompeten dan berintegritas.</p>
-                            <a href="service-details.html">
+                            <a target="_blank" href="https://www.ut.ac.id/fhsip/">
                                 Lihat Informasi
                                 <svg xmlns="http://www.w3.org/2000/svg" width="34" height="20"
                                     viewBox="0 0 34 20" fill="none">
@@ -250,10 +279,10 @@
                             <img src="{{ asset('assets/landing/images/FEB.png') }}" alt="img">
                         </div>
                         <div class="details">
-                            <h5><a href="service-details.html">Fakultas Ekonomi dan Bisnis - 6 Program Studi</a></h5>
+                            <h5><a>Fakultas Ekonomi dan Bisnis - 6 Program Studi</a></h5>
                             <p>Sebuah fakultas yang berfokus pada pengembangan ilmu ekonomi, manajemen, dan bisnis untuk
                                 mencetak lulusan yang profesional.</p>
-                            <a href="service-details.html">
+                            <a target="_blank" href="https://www.ut.ac.id/feb/">
                                 Lihat Informasi
                                 <svg xmlns="http://www.w3.org/2000/svg" width="34" height="20"
                                     viewBox="0 0 34 20" fill="none">
@@ -274,10 +303,10 @@
                             <img src="{{ asset('assets/landing/images/FST.png') }}" alt="img">
                         </div>
                         <div class="details">
-                            <h5><a href="service-details.html">Fakultas Sains dan Teknologi - 8 Program Studi</a></h5>
+                            <h5><a>Fakultas Sains dan Teknologi - 8 Program Studi</a></h5>
                             <p>Sebuah fakultas yang berfokus pada pengembangan ilmu sains dan teknologi untuk mencetak
                                 lulusan yang inovatif, dan berdaya guna.</p>
-                            <a href="service-details.html">
+                            <a target="_blank" href="https://www.ut.ac.id/fst/">
                                 Lihat Informasi
                                 <svg xmlns="http://www.w3.org/2000/svg" width="34" height="20"
                                     viewBox="0 0 34 20" fill="none">
@@ -301,8 +330,8 @@
                 <div class="w-full custom-lg:w-5/12">
                     <div class="section-title text-center wow animate__animated animate__fadeInUp"
                         data-wow-duration="0.8s">
-                        <h6 class="sub-title">Sentral Layanan Universitas Terbuka Bagansiapiapi</h6>
-                        <h2 class="title capitalize"><span>Daftar Program Studi</span> UT Bagansiapiapi
+                        <h6 class="sub-title">Sentral Layanan Universitas Terbuka Negeri Seribu Kubah</h6>
+                        <h2 class="title capitalize"><span>Daftar Program Studi</span> UT Negeri Seribu Kubah
                         </h2>
                     </div>
                 </div>
@@ -385,7 +414,7 @@
     </div>
     <!-- pricing-area start -->
     <!-- counter area start -->
-    <div class="counter-area bg-relative bg-cover bg-center pd-top-110 pd-bottom-100">
+    <div class="counter-area bg-relative bg-cover bg-center pd-top-110 pd-bottom-100" style="background-image: url('/build/assets/BG1-bGYe6Wjy.png');">
         <div class="container pd-bottom-20">
             <div class="row">
                 <div class="custom-sm:w-1/2 custom-md:w-1/4  wow animate__animated animate__fadeInUp"
@@ -459,21 +488,6 @@
                         {{-- <p class="content">In today's competitive business, the demand for efficient solutions has never been more critical.</p> --}}
                     </div>
                     <div class="accordion accordion-inner style-2 accordion-icon-left" id="accordionExample">
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" id="headingOne">
-                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                    Apakah sudah di buka penerimaan mahasiswa Baru
-                                </button>
-                            </h2>
-                            <div id="collapseOne" class="accordion-collapse collapse show"
-                                aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                                <div class="accordion-body">
-                                    <p>Ya, Pendaftaran Mahasiswa Baru Universitas Terbuka (UT) untuk masa registrasi
-                                        2025.2 TELAH RESMI DI BUKA MULAI 1 September 2025.</p>
-                                </div>
-                            </div>
-                        </div>
                         <div class="accordion-item">
                             <h2 class="accordion-header" id="headingTwo">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
@@ -561,7 +575,7 @@
                                 <div class="accordion-body">
                                     <p>SALUT (Sentra Layanan Universitas Terbuka) adalah pusat layanan resmi Universitas
                                         Terbuka (UT) yang tersebar di berbagai daerah di Indonesia, termasuk SALUT
-                                        AWWABIN TANGERANG. Kehadiran SALUT bertujuan mendekatkan UT dengan mahasiswa dan
+                                        Negeri Seribu Kubah Bagansiapiapi. Kehadiran SALUT bertujuan mendekatkan UT dengan mahasiswa dan
                                         masyarakat di daerah.</p>
                                 </div>
                             </div>
@@ -692,9 +706,9 @@
                         <div class="section-title !mb-0">
                             <h6 class="sub-title">Butuh Informasi Lebih Lanjut?</h6>
                             <h2 class="title">Hubungi Kami</h2>
-                            <p class="content">SALUT UT Bagansiapiapi siap membantu Anda. Silakan isi formulir berikut
+                            <p class="content">SALUT UT Negeri Seribu Kubah siap membantu Anda. Silakan isi formulir berikut
                                 untuk pertanyaan seputar pendaftaran, program studi, atau layanan akademik.</p>
-                            <form class="mt-[24px]">
+                            <form class="mt-[24px]" action="/" method="GET">
                                 <div class="row">
                                     <div class="custom-md:w-1/2">
                                         <div class="single-input-inner style-border">
@@ -716,14 +730,15 @@
                                             <input type="text" placeholder="Alamat">
                                         </div>
                                     </div>
-                                    <div class="custom-md:w-full">
-                                        <div class="single-input-inner style-border">
-                                            <textarea placeholder="Pesan"></textarea>
-                                        </div>
-                                    </div>
+                                    <!--<div class="custom-md:w-full">-->
+                                    <!--    <div class="single-input-inner style-border">-->
+                                    <!--        <textarea placeholder="Pesan"></textarea>-->
+                                    <!--    </div>-->
+                                    <!--</div>-->
                                     <div class="w-full">
-                                        <a class="btn btn-black mt-0 w-100 border-radius-5"
-                                            href="index.html">Kirim</a>
+                                        <button type="submit" class="btn btn-black mt-0 w-full border-radius-5">
+                                            Kirim
+                                        </button>
                                     </div>
                                 </div>
                             </form>
@@ -732,7 +747,12 @@
                 </div>
             </div>
         </div>
-        <div class="bg-img bi-31"></div>
+            <div class="bg-img bi-31"
+         style="background-image: url('/assets/landing/images/BG2.png'); 
+                background-size: cover; 
+                background-position: center; 
+                background-repeat: no-repeat;">
+    </div>
     </div>
     <!-- contact-inner-1 end -->
     <!-- team area start -->
@@ -770,7 +790,7 @@
             <div class="section-title wow animate__animated animate__fadeInUp" data-wow-duration="0.8s">
                 <div class="row">
                     <div class="custom-md:w-7/12">
-                        <h6 class="sub-title">Seputar UT Bagansiapiapi Terbaru</h6>
+                        <h6 class="sub-title">Seputar UT Negeri Seribu Kubah Terbaru</h6>
                         <h2 class="title">Blog & <span>Pengumuman</span></h2>
                     </div>
                     <div class="custom-md:w-5/12 custom-md:!text-end self-end">
@@ -791,9 +811,9 @@
                                 <li><span></span></li>
                                 <li>2 Hari</li>
                             </ul>
-                            <h4 class="mb-[16px]"><a href="blog-details.html">Seleksi Mahasiswa Baru UT Bagansiapiapi
+                            <h4 class="mb-[16px]"><a href="blog-details.html">Seleksi Mahasiswa Baru UT Negeri Seribu Kubah
                                     2025/2026</a></h4>
-                            <p class="mb-[48px]">Universitas Terbuka Bagansiapiapi resmi membuka pendaftaran mahasiswa
+                            <p class="mb-[48px]">Universitas Terbuka Negeri Seribu Kubah resmi membuka pendaftaran mahasiswa
                                 baru untuk Tahun Akademik 2025/2026. Program ini memberikan kesempatan bagi siapa saja
                                 yang ingin melanjutkan pendidikan tinggi dengan sistem belajar yang fleksibel,
                                 terjangkau, dan didukung teknologi digital modern.
@@ -817,10 +837,10 @@
                                 <li>2 Hari</li>
                             </ul>
                             <h4 class="mb-[16px]">
-                                <a href="blog-details.html">Penerimaan Mahasiswa Baru UT Bagansiapiapi 2025/2026</a>
+                                <a href="blog-details.html">Penerimaan Mahasiswa Baru UT Negeri Seribu Kubah 2025/2026</a>
                             </h4>
                             <p class="mb-[48px]">
-                                Dengan hormat, Universitas Terbuka Bagansiapiapi mengumumkan bahwa pendaftaran
+                                Dengan hormat, Universitas Terbuka Negeri Seribu Kubah mengumumkan bahwa pendaftaran
                                 mahasiswa baru Tahun Akademik 2025/2026 telah dibuka. Calon mahasiswa dapat mengikuti
                                 proses pendaftaran secara online melalui laman resmi UT. Informasi lengkap mengenai
                                 persyaratan, jadwal, dan tata cara pendaftaran tersedia pada tautan berikut.

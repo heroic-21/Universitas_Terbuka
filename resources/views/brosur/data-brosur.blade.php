@@ -163,6 +163,13 @@
         });
     @endif
 </script>
+<script>
+function handleDismiss(id) {
+    if (confirm('Yakin ingin menghapus data ini?')) {
+        document.getElementById('form-delete-' + id).submit();
+    }
+}
+</script>
 <script src="assets/js/app.js"></script>
 <!-- JAVASCRIPTS -->
 </body>

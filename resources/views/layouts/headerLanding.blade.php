@@ -33,8 +33,10 @@
             </button>
          </div>
          <div class="logo">
-            <a href="index.html"><img src="{{ asset('assets/landing/images/LOGOSALUT.png') }}" alt="img"></a>
-         </div>
+            <a href="{{ url('/') }}">
+                <img src="{{ asset('assets/landing/images/LOGOSALUT.png') }}?v={{ time() }}" alt="Logo Universitas Terbuka">
+            </a>
+        </div>
          <div class="nav-right-part nav-right-part-mobile">
             <a class="search-bar-btn" href="index.html">
                <i class="fa fa-search"></i>
@@ -79,12 +81,12 @@
             </ul>
          </div>
          <div class="nav-right-part nav-right-part-desktop custom-md:inline-flex items-center">
-            <a class="navbar-phone custom-lg:!inline-block !hidden" href="https://wa.me/085246220297">
+            <a target="_blank" class="navbar-phone custom-lg:!inline-block !hidden" href="https://wa.me/6282113815800">
                <span class="icon">
                   <img src="{{ asset('assets/landing/images/icon/1.png') }}" alt="img">
                </span>
-               <span>Contact Person (Yudi)</span>
-               <h5>0852-4622-0297</h5>
+               <span>Contact Person (Admin Salut Negeri Seribu Kubah)</span>
+               <h5>0821-1381-5800</h5>
             </a>
          </div>
       </div>

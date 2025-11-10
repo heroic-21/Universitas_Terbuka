@@ -106,6 +106,10 @@
                                                                 <span class="bg-green-500 text-white text-[11px] font-medium mr-1 px-2.5 py-0.5 rounded">
                                                                     {{ $data_mahasiswa->keterangan }}
                                                                 </span>
+                                                            @elseif($data_mahasiswa->keterangan == 'Alumni')
+                                                                <span class="bg-blue-500 text-white text-[11px] font-medium mr-1 px-2.5 py-0.5 rounded">
+                                                                    {{ $data_mahasiswa->keterangan }}
+                                                                </span>
                                                             @else
                                                                 <span class="bg-red-500 text-white text-[11px] font-medium mr-1 px-2.5 py-0.5 rounded">
                                                                     {{ $data_mahasiswa->keterangan }}

@@ -64,10 +64,6 @@
                                                 </th>
                                                 <th
                                                     class="p-3 text-xs font-medium tracking-wider text-left text-gray-700 dark:text-gray-400 uppercase">
-                                                    Keterangan Fakultas
-                                                </th>
-                                                <th
-                                                    class="p-3 text-xs font-medium tracking-wider text-left text-gray-700 dark:text-gray-400 uppercase">
                                                     Link Fakultas UT
                                                 </th>
                                                 <th

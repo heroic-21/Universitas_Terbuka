@@ -112,8 +112,8 @@
       @apply bg-white text-[#150E3D];
     }
     .banner-14-thumb {
-      @apply absolute bottom-0;
-      inset-inline-end: 8vw;
+      @apply absolute right-[4rem] top-1/2 -translate-y-[calc(50%+6rem)];
+    
       img {
         @apply min-w-[100px] max-w-[15vw] animate-move;
       }
@@ -842,7 +842,7 @@ i {
 }
 
 .bi-31 {
-  @apply bg-[url('assets/landing/images/BG2.png')] bg-cover bg-center bg-no-repeat;
+  @apply bg-[url('/build/assets/BG2.png')] bg-cover bg-center bg-no-repeat;
 }
 
 .fc-t {

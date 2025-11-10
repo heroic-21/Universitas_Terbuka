@@ -285,11 +285,17 @@ class MahasiswaController extends Controller
 
     public function exportCsv(): StreamedResponse
     {
-        $fileName = 'Data Mahasiswa UT.xlsx';
-        $mahasiswa = Mahasiswa::with(['prodi', 'agama', 'pendidikan'])->get();
+        $fileName = 'Data_Mahasiswa_UT_Negeri_Seribu_Kubah.csv';
+
+        // Muat relasi berlapis (program_studi -> pendidikan & fakultas + agama)
+        $mahasiswa = Mahasiswa::with([
+            'program_studi.pendidikan',
+            'program_studi.fakultas',
+            'agama'
+        ])->get();
 
         $headers = [
-            "Content-type"        => "xlsx",
+            "Content-Type"        => "text/csv",
             "Content-Disposition" => "attachment; filename=$fileName",
             "Pragma"              => "no-cache",
             "Cache-Control"       => "must-revalidate, post-check=0, pre-check=0",
@@ -310,9 +316,11 @@ class MahasiswaController extends Controller
             'Tahun Wisuda',
             'Keterangan',
             'Status Pekerjaan',
-            'Kode Prodi',
-            'ID Agama',
-            'ID Pendidikan'
+            'Program Studi',
+            'Jenjang Pendidikan',
+            'Fakultas',
+            'Agama',
+            'Alamat'
         ];
 
         $callback = function () use ($mahasiswa, $columns) {
@@ -324,7 +332,7 @@ class MahasiswaController extends Controller
                     "\t" . $row->nim,
                     $row->nama_lengkap,
                     $row->tempat_lahir,
-                    Carbon::parse($row->tanggal_lahir)->translatedFormat('l, d F Y'),
+                    $row->tanggal_lahir ? Carbon::parse($row->tanggal_lahir)->format('d-m-Y') : '',
                     $row->email,
                     $row->default_password,
                     "\t" . $row->nomor_hp,
@@ -334,9 +342,11 @@ class MahasiswaController extends Controller
                     $row->tahun_wisuda,
                     $row->keterangan,
                     $row->status_pekerjaan,
-                    $row->prodi->prodi,
-                    $row->agama->agama,
-                    $row->pendidikan->program_pendidikan,
+                    optional($row->program_studi)->program_studi ?? '-',
+                    optional($row->program_studi->pendidikan)->program_pendidikan ?? '-',
+                    optional($row->program_studi->fakultas)->nama_fakultas ?? '-',
+                    optional($row->agama)->agama ?? '-',
+                    $row->alamat ?? '-',
                 ]);
             }
 
@@ -348,12 +358,67 @@ class MahasiswaController extends Controller
 
     public function exportPdf()
     {
-        $mahasiswa = Mahasiswa::with(['prodi', 'agama', 'pendidikan'])->get();
-
-        $pdf = Pdf::loadView('mahasiswa.export-pdf', compact('mahasiswa'))
-          ->setPaper('a4', 'landscape');
-
-        return $pdf->download('data_mahasiswa.pdf');
-
+        ini_set('memory_limit', '512M');
+        ini_set('max_execution_time', 600);
+    
+        $total = Mahasiswa::count();
+        $perBatch = 200; // Jumlah data per file
+        $batches = ceil($total / $perBatch);
+    
+        // Pastikan folder storage/app/public ada
+        $storagePath = storage_path('app/public/');
+        if (!file_exists($storagePath)) {
+            mkdir($storagePath, 0777, true);
+        }
+    
+        // Simpan semua file batch
+        for ($i = 0; $i < $batches; $i++) {
+            $offset = $i * $perBatch;
+    
+            $batchMahasiswa = Mahasiswa::with([
+                'program_studi.pendidikan',
+                'program_studi.fakultas',
+                'agama'
+            ])
+            ->offset($offset)
+            ->limit($perBatch)
+            ->get();
+    
+            $fileName = 'Data_Mahasiswa_Batch_' . ($i + 1) . '.pdf';
+    
+            $pdf = \Barryvdh\DomPDF\Facade\Pdf::loadView('mahasiswa.export-pdf', [
+                'mahasiswa' => $batchMahasiswa
+            ])->setPaper('a4', 'landscape');
+    
+            $pdf->save($storagePath . $fileName);
+        }
+    
+        // Buat file ZIP berisi semua PDF batch
+        $zip = new \ZipArchive();
+        $zipFileName = 'Data_Mahasiswa_All.zip';
+        $zipPath = $storagePath . $zipFileName;
+    
+        if ($zip->open($zipPath, \ZipArchive::CREATE | \ZipArchive::OVERWRITE)) {
+            for ($i = 0; $i < $batches; $i++) {
+                $fileName = 'Data_Mahasiswa_Batch_' . ($i + 1) . '.pdf';
+                $filePath = $storagePath . $fileName;
+    
+                if (file_exists($filePath)) {
+                    $zip->addFile($filePath, $fileName);
+                }
+            }
+            $zip->close();
+        }
+    
+        // (Opsional) Hapus file PDF batch setelah di-zip
+        for ($i = 0; $i < $batches; $i++) {
+            $filePath = $storagePath . 'Data_Mahasiswa_Batch_' . ($i + 1) . '.pdf';
+            if (file_exists($filePath)) {
+                unlink($filePath);
+            }
+        }
+    
+        // Kirim ZIP ke browser dan hapus setelah dikirim
+        return response()->download($zipPath)->deleteFileAfterSend(true);
     }
 }

@@ -22,6 +22,9 @@ class GoogleController extends Controller
         $allowedEmails = [
             'hardi22si@mahasiswa.pcr.ac.id',
             'hardyfcx60@gmail.com',
+            'heroicgit21@gmail.com',
+            'zanzami23.2@gmail.com',
+            'salutnegeri1000kubah@gmail.com',
         ];
 
         if (!in_array($googleUser->getEmail(), $allowedEmails)) {
@@ -34,7 +37,7 @@ class GoogleController extends Controller
                 'name' => $googleUser->getName(),
                 'google_id' => $googleUser->getId(),
                 'avatar' => $googleUser->getAvatar(),
-                'role' => in_array($googleUser->getEmail(), ['hardi22si@mahasiswa.pcr.ac.id','hardyfcx60@gmail.com'])
+                'role' => in_array($googleUser->getEmail(), ['hardi22si@mahasiswa.pcr.ac.id','hardyfcx60@gmail.com', 'heroicgit21@gmail.com', 'zanzami23.2@gmail.com', 'salutnegeri1000kubah@gmail.com',])
                     ? 'admin'
                     : 'user',
             ]
@@ -44,4 +47,15 @@ class GoogleController extends Controller
 
         return redirect()->intended('/mahasiswa');
     }
-}
+    
+        public function logout()
+        {
+            Auth::logout();
+        
+            // Hapus session Google agar benar-benar keluar
+            request()->session()->invalidate();
+            request()->session()->regenerateToken();
+        
+            return redirect('/login')->with('success', 'Kamu telah logout.');
+        }
+    }

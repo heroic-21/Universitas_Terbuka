@@ -3,6 +3,8 @@ import laravel from 'laravel-vite-plugin';
 import path from 'path';
 
 export default defineConfig({
+    base: '/', // ⬅️ wajib: supaya path di CSS tidak berubah ke /build/
+    publicDir: 'public', // ⬅️ biar /assets/... langsung ambil dari folder public
     plugins: [
         laravel({
             input: [
@@ -16,6 +18,7 @@ export default defineConfig({
     ],
     resolve: {
         alias: {
+            '@': path.resolve(__dirname, 'resources'),
             '@css': path.resolve(__dirname, 'resources/css'),
             '@js': path.resolve(__dirname, 'resources/js'),
             '@views': path.resolve(__dirname, 'resources/views'),

@@ -36,7 +36,7 @@
                                 @endif
                                 @if ($admin->instagram)
                                     <li>
-                                        <a href="{{ $admin->instagram }}" target="_blank">
+                                        <a href="https://instagram.com/{{ $admin->instagram }}" target="_blank">
                                             <i class="fab fa-instagram" aria-hidden="true"></i>
                                         </a>
                                     </li>
@@ -60,7 +60,7 @@
                             <img src="https://unpkg.com/heroicons@2.0.18/24/outline/phone.svg" alt="Phone">
                         </div>
                         <div class="media-body">
-                            <h5>Contacts us</h5>
+                            <h5>Kontak Kami</h5>
                             <h6>0852 4622 0297</h6>
                         </div>
                     </div>
@@ -73,7 +73,7 @@
                         </div>
                         <div class="media-body">
                             <h5>Email Kami</h5>
-                            <h6>rdsetia95@gmail.com</h6>
+                            <h6>salutnegeri1000kubah@gmail.com</h6>
                         </div>
                     </div>
                 </div>
